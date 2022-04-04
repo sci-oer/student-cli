@@ -1,0 +1,861 @@
+versions pytest-7.1.1, python-3.9.12.final.0
+cwd=/Users/marshall/Documents/sci-oer-cli
+args=('--debug',)
+
+  pytest_cmdline_main [hook]
+      config: <_pytest.config.Config object at 0x1056957f0>
+    pytest_plugin_registered [hook]
+        plugin: <Session sci-oer-cli exitstatus='<UNSET>' testsfailed=0 testscollected=0>
+        manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+    finish pytest_plugin_registered --> [] [hook]
+    pytest_configure [hook]
+        config: <_pytest.config.Config object at 0x1056957f0>
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x1057d31c0>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x1057d33d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+    early skip of rewriting module: faulthandler [assertion]
+      pytest_plugin_registered [hook]
+          plugin: <class '_pytest.legacypath.LegacyTmpdirPlugin'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+    early skip of rewriting module: pdb [assertion]
+    early skip of rewriting module: cmd [assertion]
+    early skip of rewriting module: code [assertion]
+    early skip of rewriting module: codeop [assertion]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.PytestPluginManager object at 0x105590d30>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.Config object at 0x1056957f0>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.mark' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/mark/__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.main' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/main.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.runner' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/runner.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.fixtures' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/fixtures.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.helpconfig' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/helpconfig.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.python' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/python.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.terminal' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/terminal.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.debugging' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/debugging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unittest' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/unittest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.capture' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/capture.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.skipping' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/skipping.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.legacypath' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/legacypath.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.tmpdir' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/tmpdir.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.monkeypatch' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/monkeypatch.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.recwarn' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/recwarn.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.pastebin' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/pastebin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.nose' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/nose.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.assertion' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/assertion/__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.junitxml' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/junitxml.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.doctest' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/doctest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.cacheprovider' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/cacheprovider.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.freeze_support' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/freeze_support.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setuponly' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/setuponly.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setupplan' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/setupplan.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.stepwise' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/stepwise.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.warnings' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/warnings.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.logging' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/logging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.reports' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/reports.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.python_path' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/python_path.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unraisableexception' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/unraisableexception.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.threadexception' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/threadexception.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.faulthandler' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/faulthandler.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=6 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> err=<FDCapture 2 oldfd=7 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=8 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> in_=<FDCapture 0 oldfd=3 _state='started' tmpfile=<_io.TextIOWrapper name='/dev/null' mode='r' encoding='UTF-8'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x1057d31c0>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x1057d33d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <class '_pytest.legacypath.LegacyTmpdirPlugin'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.terminal.TerminalReporter object at 0x1057d35b0>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.logging.LoggingPlugin object at 0x1057d3670>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+    finish pytest_configure --> [] [hook]
+    pytest_sessionstart [hook]
+        session: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.PytestPluginManager object at 0x105590d30>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.Config object at 0x1056957f0>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.mark' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/mark/__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.main' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/main.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.runner' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/runner.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.fixtures' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/fixtures.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.helpconfig' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/helpconfig.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.python' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/python.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.terminal' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/terminal.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.debugging' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/debugging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unittest' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/unittest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.capture' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/capture.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.skipping' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/skipping.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.legacypath' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/legacypath.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.tmpdir' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/tmpdir.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.monkeypatch' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/monkeypatch.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.recwarn' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/recwarn.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.pastebin' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/pastebin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.nose' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/nose.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.assertion' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/assertion/__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.junitxml' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/junitxml.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.doctest' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/doctest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.cacheprovider' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/cacheprovider.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.freeze_support' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/freeze_support.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setuponly' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/setuponly.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setupplan' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/setupplan.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.stepwise' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/stepwise.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.warnings' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/warnings.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.logging' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/logging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.reports' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/reports.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.python_path' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/python_path.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unraisableexception' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/unraisableexception.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.threadexception' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/threadexception.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.faulthandler' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/faulthandler.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=6 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> err=<FDCapture 2 oldfd=7 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=8 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> in_=<FDCapture 0 oldfd=3 _state='started' tmpfile=<_io.TextIOWrapper name='/dev/null' mode='r' encoding='UTF-8'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x1057d31c0>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x1057d33d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <class '_pytest.legacypath.LegacyTmpdirPlugin'>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.terminal.TerminalReporter object at 0x1057d35b0>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.logging.LoggingPlugin object at 0x1057d3670>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.fixtures.FixtureManager object at 0x1057d3100>
+          manager: <_pytest.config.PytestPluginManager object at 0x105590d30>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_report_header [hook]
+          config: <_pytest.config.Config object at 0x1056957f0>
+          start_path: /Users/marshall/Documents/sci-oer-cli
+          startdir: /Users/marshall/Documents/sci-oer-cli
+      finish pytest_report_header --> [['rootdir: /Users/marshall/Documents/sci-oer-cli'], ['using: pytest-7.1.1']] [hook]
+    finish pytest_sessionstart --> [] [hook]
+    pytest_collection [hook]
+        session: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+    perform_collect <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0> ['/Users/marshall/Documents/sci-oer-cli'] [collection]
+        pytest_collectstart [hook]
+            collector: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        finish pytest_collectstart --> [] [hook]
+        pytest_make_collect_report [hook]
+            collector: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        processing argument (PosixPath('/Users/marshall/Documents/sci-oer-cli'), []) [collection]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/.gitignore
+                path: /Users/marshall/Documents/sci-oer-cli/.gitignore
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/.gitignore
+                path: /Users/marshall/Documents/sci-oer-cli/.gitignore
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/LICENSE
+                path: /Users/marshall/Documents/sci-oer-cli/LICENSE
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/LICENSE
+                path: /Users/marshall/Documents/sci-oer-cli/LICENSE
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/README.md
+                path: /Users/marshall/Documents/sci-oer-cli/README.md
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/README.md
+                path: /Users/marshall/Documents/sci-oer-cli/README.md
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/pyproject.toml
+                path: /Users/marshall/Documents/sci-oer-cli/pyproject.toml
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/pyproject.toml
+                path: /Users/marshall/Documents/sci-oer-cli/pyproject.toml
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/pytestdebug.log
+                path: /Users/marshall/Documents/sci-oer-cli/pytestdebug.log
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/pytestdebug.log
+                path: /Users/marshall/Documents/sci-oer-cli/pytestdebug.log
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/setup.cfg
+                path: /Users/marshall/Documents/sci-oer-cli/setup.cfg
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/setup.cfg
+                path: /Users/marshall/Documents/sci-oer-cli/setup.cfg
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/.git
+                path: /Users/marshall/Documents/sci-oer-cli/.git
+            finish pytest_ignore_collect --> None [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/.github
+                path: /Users/marshall/Documents/sci-oer-cli/.github
+            finish pytest_ignore_collect --> None [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/.pytest_cache
+                path: /Users/marshall/Documents/sci-oer-cli/.pytest_cache
+            finish pytest_ignore_collect --> None [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/.venv
+                path: /Users/marshall/Documents/sci-oer-cli/.venv
+            finish pytest_ignore_collect --> True [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/build
+                path: /Users/marshall/Documents/sci-oer-cli/build
+            finish pytest_ignore_collect --> None [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info
+                path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info
+            finish pytest_ignore_collect --> None [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/PKG-INFO
+                path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/PKG-INFO
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/PKG-INFO
+                path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/PKG-INFO
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/SOURCES.txt
+                path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/SOURCES.txt
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/SOURCES.txt
+                path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/SOURCES.txt
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/dependency_links.txt
+                path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/dependency_links.txt
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/dependency_links.txt
+                path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/dependency_links.txt
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/entry_points.txt
+                path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/entry_points.txt
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/entry_points.txt
+                path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/entry_points.txt
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/top_level.txt
+                path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/top_level.txt
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/top_level.txt
+                path: /Users/marshall/Documents/sci-oer-cli/sci_oer.egg-info/top_level.txt
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/scioer
+                path: /Users/marshall/Documents/sci-oer-cli/scioer
+            finish pytest_ignore_collect --> None [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/__init__.py
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/__init__.py
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/scioer/__init__.py
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/__init__.py
+              pytest_pycollect_makemodule [hook]
+                  parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                  module_path: /Users/marshall/Documents/sci-oer-cli/scioer/__init__.py
+                  path: /Users/marshall/Documents/sci-oer-cli/scioer/__init__.py
+              finish pytest_pycollect_makemodule --> <Package scioer> [hook]
+            finish pytest_collect_file --> [<Package scioer>] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info
+            finish pytest_ignore_collect --> None [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/PKG-INFO
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/PKG-INFO
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/PKG-INFO
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/PKG-INFO
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/SOURCES.txt
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/SOURCES.txt
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/SOURCES.txt
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/SOURCES.txt
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/dependency_links.txt
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/dependency_links.txt
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/dependency_links.txt
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/dependency_links.txt
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/entry_points.txt
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/entry_points.txt
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/entry_points.txt
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/entry_points.txt
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/top_level.txt
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/top_level.txt
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/top_level.txt
+                path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/top_level.txt
+            finish pytest_collect_file --> [] [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/tests
+                path: /Users/marshall/Documents/sci-oer-cli/tests
+            finish pytest_ignore_collect --> None [hook]
+            pytest_ignore_collect [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                collection_path: /Users/marshall/Documents/sci-oer-cli/tests/test_cli.py
+                path: /Users/marshall/Documents/sci-oer-cli/tests/test_cli.py
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                file_path: /Users/marshall/Documents/sci-oer-cli/tests/test_cli.py
+                path: /Users/marshall/Documents/sci-oer-cli/tests/test_cli.py
+              pytest_pycollect_makemodule [hook]
+                  parent: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+                  module_path: /Users/marshall/Documents/sci-oer-cli/tests/test_cli.py
+                  path: /Users/marshall/Documents/sci-oer-cli/tests/test_cli.py
+              finish pytest_pycollect_makemodule --> <Module tests/test_cli.py> [hook]
+            finish pytest_collect_file --> [<Module tests/test_cli.py>] [hook]
+        finish pytest_make_collect_report --> <CollectReport '' lenresult=2 outcome='passed'> [hook]
+        pytest_collectreport [hook]
+            report: <CollectReport '' lenresult=2 outcome='passed'>
+        finish pytest_collectreport --> [] [hook]
+    genitems <Package scioer> [collection]
+      pytest_collectstart [hook]
+          collector: <Package scioer>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Package scioer>
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x1056957f0>
+            collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/__main__.py
+            path: /Users/marshall/Documents/sci-oer-cli/scioer/__main__.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package scioer>
+            file_path: /Users/marshall/Documents/sci-oer-cli/scioer/__main__.py
+            path: /Users/marshall/Documents/sci-oer-cli/scioer/__main__.py
+        finish pytest_collect_file --> [] [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x1056957f0>
+            collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/cli.py
+            path: /Users/marshall/Documents/sci-oer-cli/scioer/cli.py
+        finish pytest_ignore_collect --> None [hook]
+        pytest_collect_file [hook]
+            parent: <Package scioer>
+            file_path: /Users/marshall/Documents/sci-oer-cli/scioer/cli.py
+            path: /Users/marshall/Documents/sci-oer-cli/scioer/cli.py
+        finish pytest_collect_file --> [] [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x1056957f0>
+            collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info
+            path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info
+        finish pytest_ignore_collect --> None [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x1056957f0>
+            collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/PKG-INFO
+            path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/PKG-INFO
+        finish pytest_ignore_collect --> None [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x1056957f0>
+            collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/SOURCES.txt
+            path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/SOURCES.txt
+        finish pytest_ignore_collect --> None [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x1056957f0>
+            collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/dependency_links.txt
+            path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/dependency_links.txt
+        finish pytest_ignore_collect --> None [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x1056957f0>
+            collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/entry_points.txt
+            path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/entry_points.txt
+        finish pytest_ignore_collect --> None [hook]
+        pytest_ignore_collect [hook]
+            config: <_pytest.config.Config object at 0x1056957f0>
+            collection_path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/top_level.txt
+            path: /Users/marshall/Documents/sci-oer-cli/scioer/sci_oer.egg-info/top_level.txt
+        finish pytest_ignore_collect --> None [hook]
+      finish pytest_make_collect_report --> <CollectReport 'scioer/__init__.py' lenresult=0 outcome='passed'> [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'scioer/__init__.py' lenresult=0 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+    genitems <Module tests/test_cli.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module tests/test_cli.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module tests/test_cli.py>
+      find_module called for: test_cli [assertion]
+      matched test file '/Users/marshall/Documents/sci-oer-cli/tests/test_cli.py' [assertion]
+      found cached rewritten pyc for /Users/marshall/Documents/sci-oer-cli/tests/test_cli.py [assertion]
+      early skip of rewriting module: typer [assertion]
+      early skip of rewriting module: click [assertion]
+      early skip of rewriting module: click.core [assertion]
+      early skip of rewriting module: click.types [assertion]
+      early skip of rewriting module: click._compat [assertion]
+      early skip of rewriting module: click.exceptions [assertion]
+      early skip of rewriting module: click.utils [assertion]
+      early skip of rewriting module: click.globals [assertion]
+      early skip of rewriting module: click.formatting [assertion]
+      early skip of rewriting module: click.parser [assertion]
+      early skip of rewriting module: click.termui [assertion]
+      early skip of rewriting module: click.decorators [assertion]
+      early skip of rewriting module: typer.colors [assertion]
+      early skip of rewriting module: typer.main [assertion]
+      early skip of rewriting module: typer.completion [assertion]
+      early skip of rewriting module: typer._completion_shared [assertion]
+      early skip of rewriting module: shellingham [assertion]
+      early skip of rewriting module: typer.models [assertion]
+      early skip of rewriting module: typer.params [assertion]
+      early skip of rewriting module: typer.utils [assertion]
+      early skip of rewriting module: shellingham [assertion]
+      early skip of rewriting module: typer.core [assertion]
+      early skip of rewriting module: typer.testing [assertion]
+      early skip of rewriting module: click.testing [assertion]
+      early skip of rewriting module: scioer [assertion]
+      early skip of rewriting module: scioer.cli [assertion]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module tests/test_cli.py>
+            name: @py_builtins
+            obj: <module 'builtins' (built-in)>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module tests/test_cli.py>
+            name: @pytest_ar
+            obj: <module '_pytest.assertion.rewrite' from '/Users/marshall/Documents/sci-oer-cli/.venv/lib/python3.9/site-packages/_pytest/assertion/rewrite.py'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module tests/test_cli.py>
+            name: CliRunner
+            obj: <class 'typer.testing.CliRunner'>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module tests/test_cli.py>
+            name: app
+            obj: <typer.main.Typer object at 0x1058c4940>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module tests/test_cli.py>
+            name: runner
+            obj: <typer.testing.CliRunner object at 0x10579d130>
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            collector: <Module tests/test_cli.py>
+            name: test_app
+            obj: <function test_app at 0x10570dca0>
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x10579d700>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_app>] [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_cli.py' lenresult=1 outcome='passed'> [hook]
+    genitems <Function test_app> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_app>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_cli.py' lenresult=1 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+      pytest_collection_modifyitems [hook]
+          session: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          config: <_pytest.config.Config object at 0x1056957f0>
+          items: [<Function test_app>]
+      finish pytest_collection_modifyitems --> [] [hook]
+      pytest_collection_finish [hook]
+          session: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        pytest_report_collectionfinish [hook]
+            config: <_pytest.config.Config object at 0x1056957f0>
+            items: [<Function test_app>]
+            start_path: /Users/marshall/Documents/sci-oer-cli
+            startdir: /Users/marshall/Documents/sci-oer-cli
+        finish pytest_report_collectionfinish --> [] [hook]
+      finish pytest_collection_finish --> [] [hook]
+    finish pytest_collection --> None [hook]
+    pytest_runtestloop [hook]
+        session: <Session sci-oer-cli exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=1>
+      pytest_runtest_protocol [hook]
+          item: <Function test_app>
+          nextitem: None
+        pytest_runtest_logstart [hook]
+            nodeid: tests/test_cli.py::test_app
+            location: ('tests/test_cli.py', 8, 'test_app')
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_app>
+        finish pytest_runtest_setup --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_app>
+            call: <CallInfo when='setup' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_cli.py::test_app' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_cli.py::test_app' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_cli.py::test_app' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x1056957f0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_app>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_app>
+          early skip of rewriting module: typer._completion_click8 [assertion]
+          early skip of rewriting module: click.shell_completion [assertion]
+          early skip of rewriting module: shellingham [assertion]
+          early skip of rewriting module: difflib [assertion]
+          early skip of rewriting module: click._textwrap [assertion]
+            pytest_assertrepr_compare [hook]
+                config: <_pytest.config.Config object at 0x1056957f0>
+                op: ==
+                left: 2
+                right: 0
+            finish pytest_assertrepr_compare --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_app>
+            call: <CallInfo when='call' excinfo=<ExceptionInfo AssertionError('assert 2 == 0\n +  where 2 = <Result SystemExit(2)>.exit_code') tblen=25>>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_cli.py::test_app' when='call' outcome='failed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_cli.py::test_app' when='call' outcome='failed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_cli.py::test_app' when='call' outcome='failed'>
+              config: <_pytest.config.Config object at 0x1056957f0>
+          finish pytest_report_teststatus --> ('failed', 'F', 'FAILED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_exception_interact [hook]
+            node: <Function test_app>
+            call: <CallInfo when='call' excinfo=<ExceptionInfo AssertionError('assert 2 == 0\n +  where 2 = <Result SystemExit(2)>.exit_code') tblen=1>>
+            report: <TestReport 'tests/test_cli.py::test_app' when='call' outcome='failed'>
+        finish pytest_exception_interact --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_app>
+            nextitem: None
+        finish pytest_runtest_teardown --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_app>
+            call: <CallInfo when='teardown' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_cli.py::test_app' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_cli.py::test_app' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_cli.py::test_app' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x1056957f0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: tests/test_cli.py::test_app
+            location: ('tests/test_cli.py', 8, 'test_app')
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+    finish pytest_runtestloop --> True [hook]
+    pytest_sessionfinish [hook]
+        session: <Session sci-oer-cli exitstatus=<ExitCode.TESTS_FAILED: 1> testsfailed=1 testscollected=1>
+        exitstatus: 1
+      pytest_terminal_summary [hook]
+          terminalreporter: <_pytest.terminal.TerminalReporter object at 0x1057d35b0>
+          exitstatus: 1
+          config: <_pytest.config.Config object at 0x1056957f0>
+      early skip of rewriting module: pygments [assertion]
+        pytest_report_teststatus [hook]
+            report: <TestReport 'tests/test_cli.py::test_app' when='call' outcome='failed'>
+            config: <_pytest.config.Config object at 0x1056957f0>
+        finish pytest_report_teststatus --> ('failed', 'F', 'FAILED') [hook]
+      finish pytest_terminal_summary --> [] [hook]
+    finish pytest_sessionfinish --> [] [hook]
+    pytest_unconfigure [hook]
+        config: <_pytest.config.Config object at 0x1056957f0>
+    finish pytest_unconfigure --> [] [hook]
