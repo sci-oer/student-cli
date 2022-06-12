@@ -52,7 +52,7 @@ jobs:
       run: |
         python -m venv vtest
         export PATH=vtest/bin/:vtest/Scripts/:$PATH
-        pip install pytest
+        pip install -r requirements.txt
 
     - name: Run unit tests and module doctests
       run: |
