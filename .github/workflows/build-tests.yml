@@ -68,4 +68,4 @@ jobs:
     - name: Test that the installed executable is able to run
       run: |
         export PATH=vinstall/bin/:vinstall/Scripts/:$PATH
-        sci-oer --help
+        scioer --help
