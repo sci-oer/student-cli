@@ -1,4 +1,6 @@
-# config.yaml
 arg1: stuff
 opt1: things
 opt2: nothing
+test:
+  image: marshallasch/java-resource:latest
+  volume: /Users/marshall/.local/share/scioer/test5

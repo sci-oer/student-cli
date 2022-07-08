@@ -1,6 +1,27 @@
-import logging
 import os
 import sys
+
+
+def get_data_directory(appname="scioer", **kwargs):
+    """
+    This will get the list of default locations to store the application data
+    """
+    directories = []
+
+    if sys.platform == "win32":
+        directories.append(os.path.join(os.getenv("APPDATA"), appname))
+
+    else:
+        XDG_DATA_HOME = os.getenv(
+            "XDG_DATA_HOME", os.path.expanduser(os.path.join("~", ".local", "share"))
+        )
+
+        directories.append(os.path.join(XDG_DATA_HOME, appname))
+
+        # treat all other platforms as *nix and conform to XDG basedir spec
+        directories.append(os.path.expanduser(os.path.join("~", f".{appname}")))
+
+    return directories
 
 
 def get_config_files(file=None, appname="scioer", **kwargs):
@@ -37,8 +58,8 @@ def get_config_files(file=None, appname="scioer", **kwargs):
         )
         XDG_CONFIG_DIRS = os.getenv("XDG_CONFIG_DIRS", "/etc/xdg")
 
-        files.append(os.path.expanduser(f"./config.yaml"))
-        files.append(os.path.expanduser(f"./config.yml"))
+        # files.append(os.path.expanduser(f"./config.yaml"))
+        # files.append(os.path.expanduser(f"./config.yml"))
 
         # treat all other platforms as *nix and conform to XDG basedir spec
         files.append(os.path.expanduser(os.path.join("~", f".{appname}.yaml")))
