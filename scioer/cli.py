@@ -84,7 +84,7 @@ def load_course(config: dict, courseName: str, ask: bool = True):
 def start(
     ctx: typer.Context,
     name: str,
-    pull: bool = True,
+    pull: bool = False,
     configFile: str = typer.Option(
         "", "--config-file", callback=conf_callback, is_eager=True
     ),
