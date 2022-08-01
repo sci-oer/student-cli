@@ -1,0 +1,2 @@
+prune .github
+global-exclude config.yml
