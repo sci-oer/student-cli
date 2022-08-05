@@ -79,6 +79,14 @@ def delete_container(container, **kwargs):
 
 
 def setup():
-    client = docker.from_env()
+    client = None
+    try:
+        client = docker.from_env()
+    except:
+        typer.secho(
+            "failed to connect to docker, check that Docker is running on the host.",
+            fg=typer.colors.RED,
+        )
+        raise typer.Exit(code=1)
 
     return client
