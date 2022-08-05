@@ -6,6 +6,7 @@ import scioer.config.load as load
 import scioer.config.parse as parser
 import os
 from typing import Optional
+from pathlib import Path
 
 from scioer.__version__ import __version__  # noqa: I900
 
@@ -23,7 +24,12 @@ app = typer.Typer(
 state = {"verbose": False}
 
 
-def conf_callback(ctx: typer.Context, param: typer.CallbackParam, value: str):
+def conf_callback(ctx: typer.Context, param: typer.CallbackParam, value: Path):
+
+    if not value:
+        ctx.default_map = ctx.default_map or {}  # Initialize the default map
+        return None
+
     typer.echo(f"Loading config file:: {value}")
     configFiles = load.get_config_files(value)
     config = value or load.filter_config_files(configFiles)
@@ -45,9 +51,24 @@ def version_callback(value: bool):
         raise typer.Exit()
 
 
+configOption = typer.Option(
+    None,
+    "--config",
+    "-c",
+    metavar="FILE",
+    dir_okay=False,
+    resolve_path=True,
+    readable=True,
+    writable=True,
+    callback=conf_callback,
+    is_eager=True,
+    help="Path to the yaml config file",
+)
+
+
 @app.command()
 def test(
-    config: str = typer.Option("", callback=conf_callback, is_eager=True),
+    config: Optional[Path] = configOption,
     opt1: str = typer.Option(...),
     opt2: str = typer.Option("hello"),
 ):
@@ -85,9 +106,7 @@ def start(
     ctx: typer.Context,
     name: str,
     pull: bool = False,
-    configFile: str = typer.Option(
-        "", "--config-file", callback=conf_callback, is_eager=True
-    ),
+    configFile: Optional[Path] = configOption,
 ):
     """Function to start a new oer container"""
 
@@ -111,7 +130,7 @@ def stop(
     ctx: typer.Context,
     name: str,
     keep: Optional[bool] = typer.Option(False, "--no-remove", "-k"),
-    configFile: str = typer.Option("", callback=conf_callback, is_eager=True),
+    configFile: Optional[Path] = configOption,
 ):
     """Function to stop a running oer container"""
 
@@ -131,7 +150,7 @@ def stop(
 def shell(
     ctx: typer.Context,
     name: str,
-    configFile: str = typer.Option("", callback=conf_callback, is_eager=True),
+    configFile: Optional[Path] = configOption,
 ):
     """Function to drop the caller into the shell of the running oer container"""
 
@@ -157,15 +176,13 @@ def about(name: str):
 @app.command()
 def config(
     ctx: typer.Context,
-    configFile: str = typer.Option(
-        "", "--config-file", metavar="FILE", callback=conf_callback, is_eager=True
-    ),
+    configFile: Optional[Path] = configOption,
 ):
     """Prints all the information about the running container"""
 
     if not configFile:
         typer.echo(
-            f"Config file not found, or not specified. Make sure that file exists or use `--config-file=FILE` to specify the file"
+            f"Config file not found, or not specified. Make sure that file exists or use `--config=FILE` to specify the file"
         )
         raise typer.Exit(1)
 
