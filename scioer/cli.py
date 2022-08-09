@@ -66,20 +66,6 @@ configOption = typer.Option(
 )
 
 
-@app.command()
-def test(
-    config: Optional[Path] = configOption,
-    opt1: str = typer.Option(...),
-    opt2: str = typer.Option("hello"),
-):
-    """Function to start a new oer container"""
-
-    if state["verbose"]:
-        typer.secho("verbose", fg=typer.colors.GREEN)
-
-    print(f"Hello {opt1} - {opt2} - {config}!")
-
-
 def load_course(config: dict, courseName: str, ask: bool = True):
 
     course = config.get(courseName, {})
