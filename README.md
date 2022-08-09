@@ -21,10 +21,10 @@ It will also install the necessary Python libraries.
 
 ```bash
 # the latest stable version
-python3 -m pip3 install scioer
+python3 -m pip3 install sci-oer
 
 # a specific version (e.g. 1.0.0)
-python3 -m pip3 install scioer==1.0.0
+python3 -m pip3 install sci-oer==1.0.0
 ```
 
 If [git] is installed, pip can also install the latest snapshot of the official
