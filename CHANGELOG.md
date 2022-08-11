@@ -1,5 +1,37 @@
 # Changelog
 
+## [v0.2.0](https://github.com/sci-oer/student-cli/releases/v0.2.0) (2022-08-11)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.1.0...v0.2.0)
+
+**Implemented enhancements:**
+
+- Add the ports specifications to the config file [\#31](https://github.com/sci-oer/student-cli/issues/31)
+- flip no pull option [\#10](https://github.com/sci-oer/student-cli/issues/10)
+- Check that docker is installed and running [\#6](https://github.com/sci-oer/student-cli/issues/6)
+- feat: add port mapping to the config file and pass the ports numbers into the container [\#33](https://github.com/sci-oer/student-cli/pull/33) ([MarshallAsch](https://github.com/MarshallAsch))
+- feat: check that docker is running before starting [\#28](https://github.com/sci-oer/student-cli/pull/28) ([MarshallAsch](https://github.com/MarshallAsch))
+- feat!: Make config file flag consistent [\#27](https://github.com/sci-oer/student-cli/pull/27) ([MarshallAsch](https://github.com/MarshallAsch))
+- chore!: flip the default value for the pull option [\#24](https://github.com/sci-oer/student-cli/pull/24) ([MarshallAsch](https://github.com/MarshallAsch))
+
+**Fixed bugs:**
+
+- Rename pip package to  for publication [\#29](https://github.com/sci-oer/student-cli/issues/29)
+
+**Closed issues:**
+
+- remove test commands [\#30](https://github.com/sci-oer/student-cli/issues/30)
+
+**Merged pull requests:**
+
+- chore!: remove test command: [\#32](https://github.com/sci-oer/student-cli/pull/32) ([MarshallAsch](https://github.com/MarshallAsch))
+- chore: Update dependency attrs to v22 [\#26](https://github.com/sci-oer/student-cli/pull/26) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/setup-python action to v4 [\#25](https://github.com/sci-oer/student-cli/pull/25) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v3 [\#23](https://github.com/sci-oer/student-cli/pull/23) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency typing\_extensions to v4.3.0 [\#22](https://github.com/sci-oer/student-cli/pull/22) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency typer to v0.6.1 [\#21](https://github.com/sci-oer/student-cli/pull/21) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency black to v22.6.0 [\#20](https://github.com/sci-oer/student-cli/pull/20) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v0.1.0](https://github.com/sci-oer/student-cli/releases/v0.1.0) (2022-08-01)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.0.1...v0.1.0)
