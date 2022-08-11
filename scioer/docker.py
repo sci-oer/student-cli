@@ -3,9 +3,81 @@ import logging
 import os
 import typer
 import subprocess
-
+import re
 
 _LOGGER = logging.getLogger(__name__)
+
+
+def port_mapping(mapping: str) -> map:
+    m = re.fullmatch("^(([0-9]{1,5})(?:\/(?:tcp|udp))?):([0-9]{1,5})$", mapping)
+    if not m:
+        typer.secho(
+            f"Invalid port specification '{mapping}'",
+            fg=typer.colors.RED,
+        )
+        raise typer.Exit(code=1)
+
+    container = m.group(1)
+    srcPort = int(m.group(2))
+    hostPort = int(m.group(3))
+
+    if srcPort < 0 or srcPort > 65535:
+        typer.secho(
+            f"Invalid port number '{srcPort}'",
+            fg=typer.colors.RED,
+        )
+        raise typer.Exit(code=1)
+
+    if hostPort < 0 or hostPort > 65535:
+        typer.secho(
+            f"Invalid port number '{srcPort}'",
+            fg=typer.colors.RED,
+        )
+        raise typer.Exit(code=1)
+
+    return {container: hostPort if hostPort != 0 else None}
+
+
+def port_map(portList: list[str]) -> dict:
+
+    portMapping = {}
+    for p in portList:
+        portMapping.update(port_mapping(p))
+
+    return portMapping
+
+
+def port_env_mapping(mapping: str) -> str:
+    m = re.fullmatch("^(([0-9]{1,5})(?:\/(?:tcp|udp))?):([0-9]{1,5})$", mapping)
+    if not m:
+        typer.secho(
+            f"Invalid port specification '{mapping}'",
+            fg=typer.colors.RED,
+        )
+        raise typer.Exit(code=1)
+
+    srcPort = int(m.group(2))
+    hostPort = int(m.group(3))
+
+    if srcPort < 0 or srcPort > 65535:
+        typer.secho(
+            f"Invalid port number '{srcPort}'",
+            fg=typer.colors.RED,
+        )
+        raise typer.Exit(code=1)
+
+    if hostPort < 0 or hostPort > 65535:
+        typer.secho(
+            f"Invalid port number '{srcPort}'",
+            fg=typer.colors.RED,
+        )
+        raise typer.Exit(code=1)
+
+    return f"PORT_{srcPort}={hostPort}"
+
+
+def port_env_map(portList: list[str]) -> list[str]:
+    return [port_env_mapping(p) for p in portList]
 
 
 def fetch_latest(client: docker.client, repository, **kwargs):
@@ -24,7 +96,8 @@ def start_container(client: docker.client, course: dict, **kwargs):
     _LOGGER.info(f"starting `{course['image']}` container as `{course['name']}`...")
     container = client.containers.run(
         course["image"],
-        publish_all_ports=True,
+        ports=port_map(course["ports"]),
+        environment=port_env_map(course["ports"]),
         name=f'scioer_{course["name"]}',
         tty=True,
         detach=True,

@@ -5,6 +5,7 @@ import click
 import scioer.config.load as load
 import scioer.config.parse as parser
 import os
+import re
 from typing import Optional
 from pathlib import Path
 
@@ -159,6 +160,90 @@ def about(name: str):
     print(f"bye {name}!")
 
 
+def prompt_port(message: str, default: int) -> int:
+    value = typer.prompt(
+        message,
+        default=default,
+        type=int,
+    )
+
+    while value < 0 or value > 65535:
+        typer.secho(
+            f"`{value}` is not a valid port number.",
+            fg=typer.colors.RED,
+        )
+
+        value = typer.prompt(
+            message,
+            default=default,
+            type=int,
+        )
+    return value
+
+
+def port_mapping(mapping: str) -> map:
+    m = re.fullmatch("^(([0-9]{1,5})(?:\/(?:tcp|udp))?):([0-9]{1,5})$", mapping)
+    if not m:
+        typer.secho(
+            f"Invalid port specification '{mapping}'",
+            fg=typer.colors.RED,
+        )
+        return None
+
+    container = m.group(1)
+    srcPort = int(m.group(2))
+    hostPort = int(m.group(3))
+
+    if srcPort < 0 or srcPort > 65535 or hostPort < 0 or hostPort > 65535:
+        typer.secho(
+            "Invalid port number.",
+            fg=typer.colors.RED,
+        )
+        return None
+
+    return {container: hostPort}
+
+
+def prompt_custom_ports() -> map:
+    value = typer.prompt(
+        "Custom ports to expose, in the form of 'container:host', or no input to skip ",
+        default="",
+        value_proc=lambda v: v.strip(),
+        type=str,
+    )
+
+    mapping = port_mapping(value)
+    if value != "" and not mapping:
+        typer.secho(
+            "Invalid port specification, please try again.",
+            fg=typer.colors.RED,
+        )
+
+    mappings = mapping if mapping else {}
+
+    while value != "":
+
+        value = typer.prompt(
+            "Custom ports to expose, in the form of 'container:host', or no input to skip ",
+            default="",
+            value_proc=lambda v: v.strip(),
+            type=str,
+        )
+
+        mapping = port_mapping(value)
+        if value != "" and not mapping:
+            typer.secho(
+                "Invalid port specification, please try again.",
+                fg=typer.colors.RED,
+            )
+            continue
+
+        if mapping:
+            mappings = {**mappings, **mapping}
+
+    return mappings
+
+
 @app.command()
 def config(
     ctx: typer.Context,
@@ -196,7 +281,41 @@ def config(
         default=course.get("volume", default_volume),
     )
 
-    config[safe_course_name] = {"image": docker_image, "volume": course_storage}
+    wiki_port = prompt_port(
+        "Wiki port to expose, (0 to publish a random port)",
+        3000,
+    )
+
+    jupyter_port = prompt_port(
+        "Jupyter notebooks port to expose, (0 to publish a random port)",
+        8888,
+    )
+
+    lectures_port = prompt_port(
+        "Lectures port to expose, (0 to publish a random port)",
+        8000,
+    )
+
+    ssh_port = prompt_port(
+        "ssh port to expose, (0 to publish a random port)",
+        2222,
+    )
+
+    mappings = {
+        "3000": wiki_port,
+        "8888": jupyter_port,
+        "8000": lectures_port,
+        "22": ssh_port,
+        **prompt_custom_ports(),
+    }
+
+    ports = [f"{k}:{v}" for k, v in mappings.items()]
+
+    config[safe_course_name] = {
+        "image": docker_image,
+        "volume": course_storage,
+        "ports": ports,
+    }
 
     parser.save_config_file(configFile, config)
 
