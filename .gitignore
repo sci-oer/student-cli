@@ -1,4 +1,6 @@
 .venv
+Pipfile
+Pipfile.lock
 *.egg-info
 build
 dist
