@@ -8,10 +8,12 @@ import os
 import re
 from typing import Optional
 from pathlib import Path
-
+import logging
 from scioer.__version__ import __version__  # noqa: I900
 
 import scioer.docker as docker
+
+_LOGGER = logging.getLogger(__name__)
 
 app = typer.Typer(
     name="Super app",
@@ -20,23 +22,24 @@ app = typer.Typer(
     context_settings={"help_option_names": ["-h", "--help"]},
 )
 
-
-# Global options get tossed in here
-state = {"verbose": False}
-
-
 def conf_callback(ctx: typer.Context, param: typer.CallbackParam, value: Path):
 
-    if not value:
-        ctx.default_map = ctx.default_map or {}  # Initialize the default map
-        return None
+    if value:
+        value = str(value)
 
-    typer.echo(f"Loading config file:: {value}")
     configFiles = load.get_config_files(value)
-    config = value or load.filter_config_files(configFiles)
+    config = load.filter_config_files(configFiles)
 
+    if not value and not config:
+        config = configFiles[0]
+        _LOGGER.debug(f"No config file found, using default: {config}")
+    elif value and value != config:
+        config = value
+        _LOGGER.debug(f"Config file does not exist yet, using anyway: {config}")
+
+    _LOGGER.debug(f"Loading config file:: {value}")
     if config:
-        typer.echo(f"Loading from config file: {config}")
+        _LOGGER.debug(f"Loading from config file: {config}")
 
         data = parser.load_config_file(config)
 
@@ -50,6 +53,11 @@ def version_callback(value: bool):
     if value:
         typer.echo(f"scioer CLI Version: {__version__}")
         raise typer.Exit()
+
+
+def verbose_callback(verbose: bool):
+    if verbose:
+        logging.basicConfig(level=logging.DEBUG)
 
 
 configOption = typer.Option(
@@ -324,14 +332,14 @@ def config(
 
 @app.callback()
 def setup(
-    verbose: Optional[bool] = typer.Option(False, "--verbose", "-v"),
+    verbose: Optional[bool] = typer.Option(
+        False, "--verbose", "-v", callback=verbose_callback, is_eager=True
+    ),
     version: Optional[bool] = typer.Option(
         None, "--version", "-V", callback=version_callback, is_eager=True
     ),
 ):
-    if verbose:
-        typer.echo("Will write verbose output")
-        state["verbose"] = True
+    pass
 
 
 if __name__ == "__main__":
