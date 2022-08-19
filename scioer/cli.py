@@ -26,7 +26,7 @@ app = typer.Typer(
 def conf_callback(ctx: typer.Context, param: typer.CallbackParam, value: Path):
 
     if value:
-        value = str(value)
+        value = os.path.realpath(os.path.expanduser(str(value)))
 
     configFiles = load.get_config_files(value)
     config = load.filter_config_files(configFiles)
@@ -67,7 +67,7 @@ configOption = typer.Option(
     "-c",
     metavar="FILE",
     dir_okay=False,
-    resolve_path=True,
+    resolve_path=False,
     readable=True,
     writable=True,
     callback=conf_callback,
@@ -330,13 +330,11 @@ def config(
 
     config[safe_course_name] = {
         "image": docker_image,
-        "volume": course_storage,
+        "volume": os.path.realpath(os.path.expanduser(course_storage)),
         "ports": ports,
     }
 
     parser.save_config_file(configFile, config)
-
-    print(f"config file: '{course_name}', '{docker_image}', '{course_storage}' ")
 
 
 @app.callback()
