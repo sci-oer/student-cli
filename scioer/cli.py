@@ -204,7 +204,7 @@ def prompt_port(message: str, default: int) -> int:
 
 
 def port_mapping(mapping: str) -> map:
-    m = re.fullmatch("^(([0-9]{1,5})(?:\/(?:tcp|udp))?)(?::([0-9]{1,5}))?$", mapping)
+    m = re.fullmatch("^(([0-9]{1,5})(?:/(?:tcp|udp))?)(?::([0-9]{1,5}))?$", mapping)
     if not m:
         return None
 
