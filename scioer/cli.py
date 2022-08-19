@@ -113,6 +113,9 @@ def start(
     client = docker.setup()
 
     config = ctx.default_map
+    if not name and len(config.keys()) == 1:
+        name = list(config.keys())[0]
+
     course = load_course(config, name)
     typer.secho(f"{course}", fg=typer.colors.YELLOW)
 
@@ -137,7 +140,6 @@ def stop(
     client = docker.setup()
 
     config = ctx.default_map
-
     if not name and len(config.keys()) == 1:
         name = list(config.keys())[0]
 
@@ -161,7 +163,6 @@ def shell(
     client = docker.setup()
 
     config = ctx.default_map
-
     if not name and len(config.keys()) == 1:
         name = list(config.keys())[0]
 
