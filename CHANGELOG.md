@@ -1,5 +1,38 @@
 # Changelog
 
+## [v0.3.0](https://github.com/sci-oer/student-cli/releases/v0.3.0) (2022-08-19)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.2.0...v0.3.0)
+
+**Implemented enhancements:**
+
+- check that start will reuse a container if it already exists [\#47](https://github.com/sci-oer/student-cli/issues/47)
+- set the host name of the docker container when it starts so the container  [\#44](https://github.com/sci-oer/student-cli/issues/44)
+- if no course name is specified and there is only a single course in the config file use that one [\#43](https://github.com/sci-oer/student-cli/issues/43)
+- for the config command use the ~/.scioer.yaml by default [\#41](https://github.com/sci-oer/student-cli/issues/41)
+- should not need to specify the config file it should load the default [\#39](https://github.com/sci-oer/student-cli/issues/39)
+- single custom port should forward the same port [\#38](https://github.com/sci-oer/student-cli/issues/38)
+- Change default storage path to home [\#37](https://github.com/sci-oer/student-cli/issues/37)
+- Implement basic start command [\#9](https://github.com/sci-oer/student-cli/issues/9)
+- feat: ask they user if they want the default ports instead of asking about each port [\#58](https://github.com/sci-oer/student-cli/pull/58) ([MarshallAsch](https://github.com/MarshallAsch))
+- feat: use desktop as storage path instead of ~/.local [\#57](https://github.com/sci-oer/student-cli/pull/57) ([MarshallAsch](https://github.com/MarshallAsch))
+- feat: set hostname in the container [\#56](https://github.com/sci-oer/student-cli/pull/56) ([MarshallAsch](https://github.com/MarshallAsch))
+- fix: missed default course name in the start command [\#55](https://github.com/sci-oer/student-cli/pull/55) ([MarshallAsch](https://github.com/MarshallAsch))
+- feat: default to the one course if there is only one configured course [\#53](https://github.com/sci-oer/student-cli/pull/53) ([MarshallAsch](https://github.com/MarshallAsch))
+- feat: if the course container already exists do not recreate it [\#52](https://github.com/sci-oer/student-cli/pull/52) ([MarshallAsch](https://github.com/MarshallAsch))
+- fix: no longer print that the port mapping is wrong when none is given [\#50](https://github.com/sci-oer/student-cli/pull/50) ([MarshallAsch](https://github.com/MarshallAsch))
+- chore: automaticly load the default config file [\#49](https://github.com/sci-oer/student-cli/pull/49) ([MarshallAsch](https://github.com/MarshallAsch))
+
+**Fixed bugs:**
+
+- no port in the config should not print an error [\#42](https://github.com/sci-oer/student-cli/issues/42)
+- make sure path gets expanded for config file [\#36](https://github.com/sci-oer/student-cli/issues/36)
+- fix: expand the paths that are passed in for the data dir and config file [\#54](https://github.com/sci-oer/student-cli/pull/54) ([MarshallAsch](https://github.com/MarshallAsch))
+
+**Merged pull requests:**
+
+- feat: when a single port is specified then use that value for the host and the container port number [\#51](https://github.com/sci-oer/student-cli/pull/51) ([MarshallAsch](https://github.com/MarshallAsch))
+
 ## [v0.2.0](https://github.com/sci-oer/student-cli/releases/v0.2.0) (2022-08-11)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.1.0...v0.2.0)
