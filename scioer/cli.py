@@ -105,7 +105,7 @@ def load_course(config: dict, courseName: str, ask: bool = True):
 def start(
     ctx: typer.Context,
     name: Optional[str] = courseNameArgument,
-    pull: bool = False,
+    pull: bool = True,
     configFile: Optional[Path] = configOption,
 ):
     """Function to start a new oer container"""
