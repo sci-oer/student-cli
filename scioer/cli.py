@@ -192,10 +192,6 @@ def prompt_port(message: str, default: int) -> int:
 def port_mapping(mapping: str) -> map:
     m = re.fullmatch("^(([0-9]{1,5})(?:\/(?:tcp|udp))?):([0-9]{1,5})$", mapping)
     if not m:
-        typer.secho(
-            f"Invalid port specification '{mapping}'",
-            fg=typer.colors.RED,
-        )
         return None
 
     container = m.group(1)
