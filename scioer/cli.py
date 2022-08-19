@@ -75,6 +75,10 @@ configOption = typer.Option(
     help="Path to the yaml config file",
 )
 
+courseNameArgument = typer.Argument(
+    None, metavar="COURSE_NAME", help="The name of the course"
+)
+
 
 def load_course(config: dict, courseName: str, ask: bool = True):
 
@@ -100,7 +104,7 @@ def load_course(config: dict, courseName: str, ask: bool = True):
 @app.command()
 def start(
     ctx: typer.Context,
-    name: str,
+    name: Optional[str] = courseNameArgument,
     pull: bool = False,
     configFile: Optional[Path] = configOption,
 ):
@@ -124,7 +128,7 @@ def start(
 @app.command()
 def stop(
     ctx: typer.Context,
-    name: str,
+    name: Optional[str] = courseNameArgument,
     keep: Optional[bool] = typer.Option(False, "--no-remove", "-k"),
     configFile: Optional[Path] = configOption,
 ):
@@ -133,6 +137,10 @@ def stop(
     client = docker.setup()
 
     config = ctx.default_map
+
+    if not name and len(config.keys()) == 1:
+        name = list(config.keys())[0]
+
     course = load_course(config, name, ask=False)
     typer.secho(f"{course}", fg=typer.colors.YELLOW)
 
@@ -145,7 +153,7 @@ def stop(
 @app.command()
 def shell(
     ctx: typer.Context,
-    name: str,
+    name: str = courseNameArgument,
     configFile: Optional[Path] = configOption,
 ):
     """Function to drop the caller into the shell of the running oer container"""
@@ -153,6 +161,10 @@ def shell(
     client = docker.setup()
 
     config = ctx.default_map
+
+    if not name and len(config.keys()) == 1:
+        name = list(config.keys())[0]
+
     course = load_course(config, name, ask=False)
     typer.secho(f"{course}", fg=typer.colors.YELLOW)
 
