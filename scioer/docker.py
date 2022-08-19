@@ -100,6 +100,7 @@ def create_container(client: docker.client, course: dict, **kwargs):
         ports=port_map(course["ports"]),
         environment=port_env_map(course["ports"]),
         name=f'scioer_{course["name"]}',
+        hostname=course["name"],
         tty=True,
         detach=True,
         user=f"{uid}:{gid}",
