@@ -22,6 +22,7 @@ app = typer.Typer(
     context_settings={"help_option_names": ["-h", "--help"]},
 )
 
+
 def conf_callback(ctx: typer.Context, param: typer.CallbackParam, value: Path):
 
     if value:
@@ -190,13 +191,13 @@ def prompt_port(message: str, default: int) -> int:
 
 
 def port_mapping(mapping: str) -> map:
-    m = re.fullmatch("^(([0-9]{1,5})(?:\/(?:tcp|udp))?):([0-9]{1,5})$", mapping)
+    m = re.fullmatch("^(([0-9]{1,5})(?:\/(?:tcp|udp))?)(?::([0-9]{1,5}))?$", mapping)
     if not m:
         return None
 
     container = m.group(1)
     srcPort = int(m.group(2))
-    hostPort = int(m.group(3))
+    hostPort = int(m.group(3) or m.group(2))
 
     if srcPort < 0 or srcPort > 65535 or hostPort < 0 or hostPort > 65535:
         typer.secho(
@@ -210,7 +211,7 @@ def port_mapping(mapping: str) -> map:
 
 def prompt_custom_ports() -> map:
     value = typer.prompt(
-        "Custom ports to expose, in the form of 'container:host', or no input to skip ",
+        "Custom ports to expose, in the form of 'container[:host]', or no input to skip ",
         default="",
         value_proc=lambda v: v.strip(),
         type=str,
