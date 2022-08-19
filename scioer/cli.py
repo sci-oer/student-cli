@@ -299,33 +299,45 @@ def config(
         default=course.get("volume", default_volume),
     )
 
-    wiki_port = prompt_port(
-        "Wiki port to expose, (0 to publish a random port)",
-        3000,
-    )
-
-    jupyter_port = prompt_port(
-        "Jupyter notebooks port to expose, (0 to publish a random port)",
-        8888,
-    )
-
-    lectures_port = prompt_port(
-        "Lectures port to expose, (0 to publish a random port)",
-        8000,
-    )
-
-    ssh_port = prompt_port(
-        "ssh port to expose, (0 to publish a random port)",
-        2222,
-    )
+    useDefaults = typer.confirm("Use the default ports", default=True)
 
     mappings = {
-        "3000": wiki_port,
-        "8888": jupyter_port,
-        "8000": lectures_port,
-        "22": ssh_port,
-        **prompt_custom_ports(),
+        "3000": 3000,
+        "8888": 8888,
+        "8000": 8000,
+        "22": 2222,
     }
+
+    if not useDefaults:
+        wiki_port = prompt_port(
+            "Wiki port to expose, (0 to publish a random port)",
+            3000,
+        )
+
+        jupyter_port = prompt_port(
+            "Jupyter notebooks port to expose, (0 to publish a random port)",
+            8888,
+        )
+
+        lectures_port = prompt_port(
+            "Lectures port to expose, (0 to publish a random port)",
+            8000,
+        )
+
+        ssh_port = prompt_port(
+            "ssh port to expose, (0 to publish a random port)",
+            2222,
+        )
+
+        customPorts = prompt_custom_ports()
+
+        mappings = {
+            "3000": wiki_port,
+            "8888": jupyter_port,
+            "8000": lectures_port,
+            "22": ssh_port,
+            **customPorts,
+        }
 
     ports = [f"{k}:{v}" for k, v in mappings.items()]
 
