@@ -286,7 +286,7 @@ def config(
     )
 
     default_image = "marshallasch/oo-resource:latest"
-    default_volume = os.path.join(load.get_data_directory()[0], safe_course_name)
+    default_volume = os.path.join(os.path.expanduser("~/Desktop"), safe_course_name)
 
     course = config.get(safe_course_name, {})
 
