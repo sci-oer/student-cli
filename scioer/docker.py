@@ -1,3 +1,4 @@
+from typing import Container
 import docker
 import logging
 import os
@@ -88,7 +89,7 @@ def fetch_latest(client: docker.client, repository, **kwargs):
     _LOGGER.info("Done pulling the latest docker image")
 
 
-def start_container(client: docker.client, course: dict, **kwargs):
+def create_container(client: docker.client, course: dict, **kwargs):
 
     uid = os.getuid()
     gid = os.getgid()
@@ -104,6 +105,26 @@ def start_container(client: docker.client, course: dict, **kwargs):
         user=f"{uid}:{gid}",
         volumes=[f"{course['volume']}:/course"],
     )
+
+    return container
+
+
+def start_container(client: docker.client, course: dict, **kwargs):
+
+    container = None
+    try:
+        container = client.containers.get(f'scioer_{course["name"]}')
+        _LOGGER.info(f'Container `scioer_{course["name"]}` already exists, starting...')
+
+        if container.status == "running":
+            _LOGGER.info("Container is already running")
+        else:
+            container.start()
+            _LOGGER.info("Successfully started")
+
+    except:
+        _LOGGER.info(f'Container `scioer_{course["name"]}` does not exist, starting...')
+        container = create_container(client, course)
 
     return container
 
