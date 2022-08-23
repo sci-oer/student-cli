@@ -1,0 +1,6 @@
+black==22.6.0
+packaging==21.3
+pytest==7.1.2
+wheel==0.37.1
+setuptools==62.3.2
+

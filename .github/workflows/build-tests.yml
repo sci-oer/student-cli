@@ -54,6 +54,7 @@ jobs:
         python -m venv vtest
         export PATH=vtest/bin/:vtest/Scripts/:$PATH
         pip install .
+        pip install -r dev-requirements.txt
         pip install -r requirements.txt
 
     - name: Run unit tests and module doctests
