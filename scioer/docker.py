@@ -10,7 +10,7 @@ _LOGGER = logging.getLogger(__name__)
 
 
 def port_mapping(mapping: str) -> map:
-    m = re.fullmatch("^(([0-9]{1,5})(?:\/(?:tcp|udp))?):([0-9]{1,5})$", mapping)
+    m = re.fullmatch("^(([0-9]{1,5})(?:/(?:tcp|udp))?):([0-9]{1,5})$", mapping)
     if not m:
         typer.secho(
             f"Invalid port specification '{mapping}'",
@@ -49,7 +49,7 @@ def port_map(portList: list[str]) -> dict:
 
 
 def port_env_mapping(mapping: str) -> str:
-    m = re.fullmatch("^(([0-9]{1,5})(?:\/(?:tcp|udp))?):([0-9]{1,5})$", mapping)
+    m = re.fullmatch("^(([0-9]{1,5})(?:/(?:tcp|udp))?):([0-9]{1,5})$", mapping)
     if not m:
         typer.secho(
             f"Invalid port specification '{mapping}'",
