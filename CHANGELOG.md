@@ -1,5 +1,16 @@
 # Changelog
 
+## [v0.4.0](https://github.com/sci-oer/student-cli/releases/v0.4.0) (2022-08-23)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.3.0...v0.4.0)
+
+**Merged pull requests:**
+
+- chore: update dependancy files, added shellingham and rich for pretty printing [\#62](https://github.com/sci-oer/student-cli/pull/62) ([MarshallAsch](https://github.com/MarshallAsch))
+- feat: update the help messages [\#61](https://github.com/sci-oer/student-cli/pull/61) ([MarshallAsch](https://github.com/MarshallAsch))
+- fix: removed extra / in the ports regex [\#60](https://github.com/sci-oer/student-cli/pull/60) ([MarshallAsch](https://github.com/MarshallAsch))
+- chore: remove setting the uid and guid of the user that the container runs as [\#59](https://github.com/sci-oer/student-cli/pull/59) ([MarshallAsch](https://github.com/MarshallAsch))
+
 ## [v0.3.0](https://github.com/sci-oer/student-cli/releases/v0.3.0) (2022-08-19)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.2.0...v0.3.0)
