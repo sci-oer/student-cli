@@ -91,8 +91,8 @@ def fetch_latest(client: docker.client, repository, **kwargs):
 
 def create_container(client: docker.client, course: dict, **kwargs):
 
-    uid = os.getuid()
-    gid = os.getgid()
+    # uid = os.getuid()
+    # gid = os.getgid()
 
     _LOGGER.info(f"starting `{course['image']}` container as `{course['name']}`...")
     container = client.containers.run(
@@ -103,7 +103,7 @@ def create_container(client: docker.client, course: dict, **kwargs):
         hostname=course["name"],
         tty=True,
         detach=True,
-        user=f"{uid}:{gid}",
+        # user=f"{uid}:{gid}",
         volumes=[f"{course['volume']}:/course"],
     )
 
