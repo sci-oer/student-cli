@@ -16,8 +16,18 @@ import scioer.docker as docker
 _LOGGER = logging.getLogger(__name__)
 
 app = typer.Typer(
-    name="Super app",
-    help="some help here",
+    name="Self Contained Interactive Open Educational Resource Helper",
+    help=""" A CLI tool to help configure, start, stop course resources.
+
+    \b
+    Common usage commands:
+    1. `scioer config`
+        .... fill in the form
+    2. `scioer start <course>`
+    3. `scioer shell <course>`
+    4. `scioer stop <course>`
+    \f
+    """,
     no_args_is_help=True,
     context_settings={"help_option_names": ["-h", "--help"]},
 )
@@ -108,7 +118,7 @@ def start(
     pull: bool = True,
     configFile: Optional[Path] = configOption,
 ):
-    """Function to start a new oer container"""
+    """Start a oer container"""
 
     client = docker.setup()
 
@@ -135,7 +145,7 @@ def stop(
     keep: Optional[bool] = typer.Option(False, "--no-remove", "-k"),
     configFile: Optional[Path] = configOption,
 ):
-    """Function to stop a running oer container"""
+    """Stop a running course container"""
 
     client = docker.setup()
 
@@ -158,7 +168,7 @@ def shell(
     name: str = courseNameArgument,
     configFile: Optional[Path] = configOption,
 ):
-    """Function to drop the caller into the shell of the running oer container"""
+    """Start a shell in a running course container"""
 
     client = docker.setup()
 
@@ -267,7 +277,7 @@ def config(
     ctx: typer.Context,
     configFile: Optional[Path] = configOption,
 ):
-    """Prints all the information about the running container"""
+    """Setup a new course resource, or edit an existing one"""
 
     if not configFile:
         typer.echo(
