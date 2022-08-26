@@ -5,11 +5,12 @@ import os
 import typer
 import subprocess
 import re
+from collections.abc import Mapping
 
 _LOGGER = logging.getLogger(__name__)
 
 
-def port_mapping(mapping: str) -> map:
+def port_mapping(mapping: str) -> Mapping:
     m = re.fullmatch("^(([0-9]{1,5})(?:/(?:tcp|udp))?):([0-9]{1,5})$", mapping)
     if not m:
         typer.secho(
@@ -39,7 +40,7 @@ def port_mapping(mapping: str) -> map:
     return {container: hostPort if hostPort != 0 else None}
 
 
-def port_map(portList: list[str]) -> dict:
+def port_map(portList: list) -> dict:
 
     portMapping = {}
     for p in portList:
@@ -77,7 +78,7 @@ def port_env_mapping(mapping: str) -> str:
     return f"PORT_{srcPort}={hostPort}"
 
 
-def port_env_map(portList: list[str]) -> list[str]:
+def port_env_map(portList: list) -> list:
     return [port_env_mapping(p) for p in portList]
 
 

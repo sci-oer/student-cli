@@ -62,6 +62,11 @@ jobs:
         export PATH=vtest/bin/:vtest/Scripts/:$PATH
         XDG_RUNTIME_DIR=.tests_rundir python -m pytest
 
+    - name: Run type tests
+      run: |
+        export PATH=vtest/bin/:vtest/Scripts/:$PATH
+        pytype --config pytype.cfg --keep-going .
+
     - name: Set up a environment to install into, and install the package from sources
       run: |
         python -m venv vinstall
