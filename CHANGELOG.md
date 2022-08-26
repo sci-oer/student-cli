@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.4.1](https://github.com/sci-oer/student-cli/releases/v0.4.1) (2022-08-26)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.4.0...v0.4.1)
+
+**Merged pull requests:**
+
+- fix: corrected pytype issues [\#65](https://github.com/sci-oer/student-cli/pull/65) ([MarshallAsch](https://github.com/MarshallAsch))
+
 ## [v0.4.0](https://github.com/sci-oer/student-cli/releases/v0.4.0) (2022-08-23)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.3.0...v0.4.0)
