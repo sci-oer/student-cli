@@ -92,7 +92,7 @@ courseNameArgument = typer.Argument(
 )
 
 
-def load_course(config: dict, courseName: str, ask: bool = True):
+def load_course(config: Mapping, courseName: str, ask: bool = True):
 
     course = config.get(courseName, {})
 

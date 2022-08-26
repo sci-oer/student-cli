@@ -40,7 +40,7 @@ def port_mapping(mapping: str) -> Mapping:
     return {container: hostPort if hostPort != 0 else None}
 
 
-def port_map(portList: list[str]) -> dict:
+def port_map(portList: list) -> dict:
 
     portMapping = {}
     for p in portList:
@@ -78,7 +78,7 @@ def port_env_mapping(mapping: str) -> str:
     return f"PORT_{srcPort}={hostPort}"
 
 
-def port_env_map(portList: list[str]) -> list[str]:
+def port_env_map(portList: list) -> list:
     return [port_env_mapping(p) for p in portList]
 
 
