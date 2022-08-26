@@ -1,4 +1,6 @@
 import typer
+from collections.abc import Mapping
+
 import sys
 import yaml
 import click
@@ -213,10 +215,10 @@ def prompt_port(message: str, default: int) -> int:
     return value
 
 
-def port_mapping(mapping: str) -> map:
+def port_mapping(mapping: str) -> Mapping:
     m = re.fullmatch("^(([0-9]{1,5})(?:/(?:tcp|udp))?)(?::([0-9]{1,5}))?$", mapping)
     if not m:
-        return None
+        return {}
 
     container = m.group(1)
     srcPort = int(m.group(2))
@@ -227,12 +229,12 @@ def port_mapping(mapping: str) -> map:
             "Invalid port number.",
             fg=typer.colors.RED,
         )
-        return None
+        return {}
 
     return {container: hostPort}
 
 
-def prompt_custom_ports() -> map:
+def prompt_custom_ports() -> Mapping:
     value = typer.prompt(
         "Custom ports to expose, in the form of 'container[:host]', or no input to skip ",
         default="",
@@ -247,7 +249,7 @@ def prompt_custom_ports() -> map:
             fg=typer.colors.RED,
         )
 
-    mappings = mapping if mapping else {}
+    mappings = mapping
 
     while value != "":
 

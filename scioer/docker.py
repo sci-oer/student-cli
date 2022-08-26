@@ -5,11 +5,12 @@ import os
 import typer
 import subprocess
 import re
+from collections.abc import Mapping
 
 _LOGGER = logging.getLogger(__name__)
 
 
-def port_mapping(mapping: str) -> map:
+def port_mapping(mapping: str) -> Mapping:
     m = re.fullmatch("^(([0-9]{1,5})(?:/(?:tcp|udp))?):([0-9]{1,5})$", mapping)
     if not m:
         typer.secho(
