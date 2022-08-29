@@ -188,29 +188,29 @@ def shell(
         typer.secho(f'Course "{name}" is not running.', fg=typer.colors.YELLOW)
 
 
-
 def print_container(container):
     indent = 2
-    print(f'Course: {container.name[7:]} ({container.status})')
+    print(f"Course: {container.name[7:]} ({container.status})")
 
     print(f'{" " * indent }Ports:')
     ports = list(container.ports.items())
-    if  ports:
+    if ports:
         for port in ports[:-1]:
             print(f'{" " * indent }├── {port[1][0]["HostPort"]} -> {port[0][:-4]}')
         port = ports[-1]
         print(f'{" " * indent }└── {port[1][0]["HostPort"]} -> {port[0][:-4]}')
 
     print(f'{" " * indent }Volumes:')
-    volumes = [v for v in container.attrs['Mounts'] if v['Type'] == 'bind' ]
+    volumes = [v for v in container.attrs["Mounts"] if v["Type"] == "bind"]
     if volumes:
         for volume in volumes[:-1]:
-            hostPath = volume['Source'].replace(os.environ['HOME'], '~')
+            hostPath = volume["Source"].replace(os.environ["HOME"], "~")
             print(f'{" " * indent }├── {hostPath} as {volume["Destination"]}')
 
         volume = volumes[-1]
-        hostPath = volume['Source'].replace(os.environ['HOME'], '~')
+        hostPath = volume["Source"].replace(os.environ["HOME"], "~")
         print(f'{" " * indent }└── {hostPath} as {volume["Destination"]}')
+
 
 @app.command()
 def status(
@@ -230,7 +230,7 @@ def status(
     notRunning = []
     for n in names:
         try:
-            c = client.containers.get(f'scioer_{n}')
+            c = client.containers.get(f"scioer_{n}")
             filtered.append(c)
         except:
             notRunning.append(n)
@@ -239,7 +239,7 @@ def status(
         print_container(c)
 
     for n in notRunning:
-        print(f'Course: {n} (Not Running)')
+        print(f"Course: {n} (Not Running)")
 
 
 def prompt_port(message: str, default: int) -> int:
