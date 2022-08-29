@@ -97,10 +97,12 @@ def load_course(config: Mapping, courseName: str, ask: bool = True):
     course = config.get(courseName, {})
 
     while ask and not course:
-        typer.secho(
-            f'Course "{courseName} is not found. use `scioer config` if you want to create it.',
-            fg=typer.colors.YELLOW,
-        )
+
+        if courseName:
+            typer.secho(
+                f'Course "{courseName} is not found. use `scioer config` if you want to create it.',
+                fg=typer.colors.YELLOW,
+            )
         courses = [k for k in config.keys() if isinstance(config[k], dict)]
         courseName = click.prompt(
             "Course not found, did you mean one of:", type=click.Choice(courses)
@@ -111,6 +113,26 @@ def load_course(config: Mapping, courseName: str, ask: bool = True):
     if course:
         course["name"] = courseName
     return course
+
+
+def print_post_start_help(courseName):
+    typer.secho(f"Started the {courseName} course resource", fg=typer.colors.GREEN)
+    typer.secho(
+        f"Login for the wiki: 'admin@example.com' 'password'", fg=typer.colors.GREEN
+    )
+
+    typer.echo("-----")
+    typer.secho(f"To stop the course: scioer stop {courseName}", fg=typer.colors.YELLOW)
+    typer.secho(
+        f"To get a shell for the course: scioer shell {courseName}",
+        fg=typer.colors.YELLOW,
+    )
+    typer.secho(
+        f"To re-start the course: scioer start {courseName}", fg=typer.colors.YELLOW
+    )
+    typer.secho(
+        f"To get information on the courses: scioer status", fg=typer.colors.YELLOW
+    )
 
 
 @app.command()
@@ -129,15 +151,18 @@ def start(
         name = list(config.keys())[0]
 
     course = load_course(config, name)
-    typer.secho(f"{course}", fg=typer.colors.YELLOW)
+    _LOGGER.debug("course content:", course)
 
     if pull:
-        typer.secho("pull", fg=typer.colors.GREEN)
+        typer.secho(
+            f"Pulling the latest version of the {course['name']}...",
+            fg=typer.colors.GREEN,
+        )
         docker.fetch_latest(client, course["image"])
 
+    typer.secho("Starting...", fg=typer.colors.GREEN)
     docker.start_container(client, course)
-
-    print(f"Hello {name}!")
+    print_post_start_help(course["name"])
 
 
 @app.command()
