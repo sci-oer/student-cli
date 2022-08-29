@@ -1,5 +1,21 @@
 # Changelog
 
+## [v0.5.0](https://github.com/sci-oer/student-cli/releases/v0.5.0) (2022-08-29)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.4.1...v0.5.0)
+
+**Implemented enhancements:**
+
+- message after scioer start [\#69](https://github.com/sci-oer/student-cli/issues/69)
+- Add support for keeping track of runtime information [\#5](https://github.com/sci-oer/student-cli/issues/5)
+- Load options by default from a config file [\#4](https://github.com/sci-oer/student-cli/issues/4)
+- feat: print some help information when the course resource is started [\#73](https://github.com/sci-oer/student-cli/pull/73) ([MarshallAsch](https://github.com/MarshallAsch))
+- feat: add basic course status command [\#72](https://github.com/sci-oer/student-cli/pull/72) ([MarshallAsch](https://github.com/MarshallAsch))
+
+**Fixed bugs:**
+
+- fix: Create intermediate config file directories [\#71](https://github.com/sci-oer/student-cli/pull/71) ([MarshallAsch](https://github.com/MarshallAsch))
+
 ## [v0.4.1](https://github.com/sci-oer/student-cli/releases/v0.4.1) (2022-08-26)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.4.0...v0.4.1)
