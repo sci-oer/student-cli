@@ -20,6 +20,7 @@ def load_config_file(file):
 
 def save_config_file(file, config):
     try:
+        os.makedirs(os.path.dirname(file), exist_ok=True)
         with open(file, "w") as f:
             data = yaml.dump(config)
             f.write(data)
