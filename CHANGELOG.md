@@ -1,5 +1,19 @@
 # Changelog
 
+## [v0.5.1](https://github.com/sci-oer/student-cli/releases/v0.5.1) (2022-08-30)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.5.0...v0.5.1)
+
+**Implemented enhancements:**
+
+- no pull as the default behaviour if there is a matching image [\#68](https://github.com/sci-oer/student-cli/issues/68)
+- did not print the MOD when starting a shell [\#48](https://github.com/sci-oer/student-cli/issues/48)
+- feat!: added auto fetch as a configuration option that can be overwridden at start time [\#75](https://github.com/sci-oer/student-cli/pull/75) ([MarshallAsch](https://github.com/MarshallAsch))
+
+**Fixed bugs:**
+
+- fix: did not print the MOTD when starting a shell in the container [\#76](https://github.com/sci-oer/student-cli/pull/76) ([MarshallAsch](https://github.com/MarshallAsch))
+
 ## [v0.5.0](https://github.com/sci-oer/student-cli/releases/v0.5.0) (2022-08-29)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.4.1...v0.5.0)
