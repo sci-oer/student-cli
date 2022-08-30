@@ -140,7 +140,7 @@ def print_post_start_help(courseName):
 def start(
     ctx: typer.Context,
     name: Optional[str] = courseNameArgument,
-    pull: bool = True,
+    pull: bool = False,
     configFile: Optional[Path] = configOption,
 ):
     """Start a oer container"""
@@ -154,7 +154,7 @@ def start(
     course = load_course(config, name)
     _LOGGER.debug("course content:", course)
 
-    if pull:
+    if course.get("auto_pull", False) or pull:
         typer.secho(
             f"Pulling the latest version of the {course['name']}...",
             fg=typer.colors.GREEN,
@@ -379,6 +379,11 @@ def config(
         "What docker image does the course use?",
         default=course.get("image", default_image),
     )
+
+    auto_pull = typer.confirm(
+        "Automatically fetch new versions", default=course.get("auto_pull", False)
+    )
+
     course_storage = typer.prompt(
         "Where should the files for the course be stored?",
         default=course.get("volume", default_volume),
@@ -430,6 +435,7 @@ def config(
         "image": docker_image,
         "volume": os.path.realpath(os.path.expanduser(course_storage)),
         "ports": ports,
+        "auto_pull": auto_pull,
     }
 
     parser.save_config_file(configFile, config)
