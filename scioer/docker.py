@@ -165,6 +165,9 @@ def attach(client: docker.client, courseName: str, **kwargs):
         )
         return
 
+    status, out = container.exec_run("cat /scripts/motd.txt")
+    typer.echo(out)
+
     typer.echo("Starting interactive shell in the container, type `exit` to quit.")
     os.system(f"docker exec -it scioer_{courseName} bash")
 
