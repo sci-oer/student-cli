@@ -1,5 +1,14 @@
 # Changelog
 
+## [v0.6.0](https://github.com/sci-oer/student-cli/releases/v0.6.0) (2022-08-31)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.5.1...v0.6.0)
+
+**Merged pull requests:**
+
+- fix: fix home path env var expansion on windows [\#80](https://github.com/sci-oer/student-cli/pull/80) ([MarshallAsch](https://github.com/MarshallAsch))
+- feat: delete old image version after a new version is pulled [\#79](https://github.com/sci-oer/student-cli/pull/79) ([MarshallAsch](https://github.com/MarshallAsch))
+
 ## [v0.5.1](https://github.com/sci-oer/student-cli/releases/v0.5.1) (2022-08-30)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.5.0...v0.5.1)
