@@ -86,8 +86,18 @@ def fetch_latest(client: docker.client, repository, **kwargs):
     _LOGGER.info(
         f'pulling latest version of the "{repository}" docker image, this may take a while...'
     )
-    client.images.pull(repository)
+
+    oldImage = None
+    try:
+        oldImage = client.images.get(repository)
+    except:
+        pass
+    image = client.images.pull(repository)
     _LOGGER.info("Done pulling the latest docker image")
+
+    if oldImage and oldImage.id != image.id:
+        oldImage.remove()
+    return image
 
 
 def create_container(client: docker.client, course: dict, **kwargs):
