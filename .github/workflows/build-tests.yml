@@ -62,7 +62,8 @@ jobs:
         export PATH=vtest/bin/:vtest/Scripts/:$PATH
         XDG_RUNTIME_DIR=.tests_rundir python -m pytest
 
-    - name: Run type tests
+    - name: Run typer tests (linux)
+      if: matrix.os == 'ubuntu-latest'
       run: |
         export PATH=vtest/bin/:vtest/Scripts/:$PATH
         pytype --config pytype.cfg --keep-going .
