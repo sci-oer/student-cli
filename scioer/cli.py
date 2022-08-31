@@ -5,6 +5,7 @@ from collections.abc import Mapping
 import sys
 import yaml
 import click
+import platform
 import scioer.config.load as load
 import scioer.config.parse as parser
 import os
@@ -227,13 +228,17 @@ def print_container(container):
 
     print(f'{" " * indent }Volumes:')
     volumes = [v for v in container.attrs["Mounts"] if v["Type"] == "bind"]
+
+    home = (
+        os.environ["HOMEPATH"] if platform.system() == "Windows" else os.environ["HOME"]
+    )
     if volumes:
         for volume in volumes[:-1]:
-            hostPath = volume["Source"].replace(os.environ["HOME"], "~")
+            hostPath = volume["Source"].replace(home, "~")
             print(f'{" " * indent }├── {hostPath} as {volume["Destination"]}')
 
         volume = volumes[-1]
-        hostPath = volume["Source"].replace(os.environ["HOME"], "~")
+        hostPath = volume["Source"].replace(home, "~")
         print(f'{" " * indent }└── {hostPath} as {volume["Destination"]}')
 
 
