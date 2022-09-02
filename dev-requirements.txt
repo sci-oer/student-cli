@@ -2,5 +2,5 @@ black==22.8.0
 packaging==21.3
 pytest==7.1.3
 wheel==0.37.1
-setuptools==62.3.2
+setuptools==62.6.0
 pytype==2022.8.30
