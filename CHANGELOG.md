@@ -1,5 +1,19 @@
 # Changelog
 
+## [v0.6.1](https://github.com/sci-oer/student-cli/releases/v0.6.1) (2022-09-02)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.6.0...v0.6.1)
+
+**Merged pull requests:**
+
+- Update dependency pytest to v7.1.3 [\#83](https://github.com/sci-oer/student-cli/pull/83) ([renovate[bot]](https://github.com/apps/renovate))
+- fix: only open the container ports to localhost unless the public config option is set [\#82](https://github.com/sci-oer/student-cli/pull/82) ([MarshallAsch](https://github.com/MarshallAsch))
+- Update dependency black to v22.8.0 [\#81](https://github.com/sci-oer/student-cli/pull/81) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency pathspec to v0.10.0 [\#78](https://github.com/sci-oer/student-cli/pull/78) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency pytype to v2022.8.30 [\#77](https://github.com/sci-oer/student-cli/pull/77) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency colorlog to v6.7.0 [\#74](https://github.com/sci-oer/student-cli/pull/74) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency setuptools to v65 [\#64](https://github.com/sci-oer/student-cli/pull/64) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v0.6.0](https://github.com/sci-oer/student-cli/releases/v0.6.0) (2022-08-31)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.5.1...v0.6.0)
