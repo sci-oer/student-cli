@@ -441,6 +441,7 @@ def config(
         "volume": os.path.realpath(os.path.expanduser(course_storage)),
         "ports": ports,
         "auto_pull": auto_pull,
+        "public": False,
     }
 
     parser.save_config_file(configFile, config)
