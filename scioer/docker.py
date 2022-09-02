@@ -10,7 +10,7 @@ from collections.abc import Mapping
 _LOGGER = logging.getLogger(__name__)
 
 
-def port_mapping(mapping: str) -> Mapping:
+def port_mapping(mapping: str, public: bool) -> Mapping:
     m = re.fullmatch("^(([0-9]{1,5})(?:/(?:tcp|udp))?):([0-9]{1,5})$", mapping)
     if not m:
         typer.secho(
@@ -37,14 +37,15 @@ def port_mapping(mapping: str) -> Mapping:
         )
         raise typer.Exit(code=1)
 
-    return {container: hostPort if hostPort != 0 else None}
+    host = "0.0.0.0" if public else "127.0.0.1"
+    return {container: (host, hostPort) if hostPort != 0 else None}
 
 
-def port_map(portList: list) -> dict:
+def port_map(portList: list, public: bool) -> dict:
 
     portMapping = {}
     for p in portList:
-        portMapping.update(port_mapping(p))
+        portMapping.update(port_mapping(p, public))
 
     return portMapping
 
@@ -108,7 +109,7 @@ def create_container(client: docker.client, course: dict, **kwargs):
     _LOGGER.info(f"starting `{course['image']}` container as `{course['name']}`...")
     container = client.containers.run(
         course["image"],
-        ports=port_map(course["ports"]),
+        ports=port_map(course["ports"], course.get("public", False)),
         environment=port_env_map(course["ports"]),
         name=f'scioer_{course["name"]}',
         hostname=course["name"],
