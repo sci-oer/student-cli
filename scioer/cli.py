@@ -229,9 +229,7 @@ def print_container(container):
     print(f'{" " * indent }Volumes:')
     volumes = [v for v in container.attrs["Mounts"] if v["Type"] == "bind"]
 
-    home = (
-        os.environ["HOMEPATH"] if platform.system() == "Windows" else os.environ["HOME"]
-    )
+    home = os.path.expanduser("~")
     if volumes:
         for volume in volumes[:-1]:
             hostPath = volume["Source"].replace(home, "~")
