@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.6.2](https://github.com/sci-oer/student-cli/releases/v0.6.2) (2022-09-05)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.6.1...v0.6.2)
+
+**Fixed bugs:**
+
+- fix: use platform agnostic HOME path expansion in thestatus volume [\#85](https://github.com/sci-oer/student-cli/pull/85) ([MarshallAsch](https://github.com/MarshallAsch))
+
 ## [v0.6.1](https://github.com/sci-oer/student-cli/releases/v0.6.1) (2022-09-02)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.6.0...v0.6.1)
