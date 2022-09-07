@@ -13,7 +13,13 @@ import re
 from typing import Optional
 from pathlib import Path
 import logging
-from scioer.__version__ import __version__  # noqa: I900
+# from scioer.__version__ import __version__  # noqa: I900
+
+__version__ = "UNKOWN"
+try:
+  from scioer.__version__ import __version__
+except:
+    pass
 
 import scioer.docker as docker
 

@@ -9,3 +9,5 @@ __pycache__
 
 
 config.yml
+# version file to be automaticly generated
+__version__.py

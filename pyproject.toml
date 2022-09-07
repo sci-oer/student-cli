@@ -6,3 +6,52 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools_scm]
+write_to = "scioer/__version__.py"
+
+
+[project]
+name = "sci-oer"
+description = "A cli application to help launch the sci-oer course container"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = [
+    "Monitoring",
+    "AWS",
+    "Plex",
+    "Internal Tools"
+]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Education",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.7",
+    "License :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+    "Topic :: Education",
+    "Topic :: Education :: Computer Aided Instruction (CAI)",
+    "Topic :: Software Development",
+    "Topic :: Utilities"
+]
+dynamic = ["version", "dependencies"]
+
+[[project.authors]]
+name = "Marshall Asch"
+email = "marshall.asch@plexapp.com"
+
+[project.urls]
+Documentation = "https://github.com/sci-oer/student-cli/blob/main/README.md"
+Source = "https://github.com/sci-oer/student-cli"
+"Bug Tracker" = "https://github.com/sci-oer/student-cli/issues"
+Funding = "https://github.com/sci-oer/student-cli/blob/main/.github/FUNDING.md"
+
+[tool.setuptools.packages.find]
+
+[project.scripts]
+scioer = "scioer.cli:app"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
