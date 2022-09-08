@@ -180,7 +180,7 @@ def attach(client: docker.client, courseName: str, **kwargs):
     typer.echo(out)
 
     typer.echo("Starting interactive shell in the container, type `exit` to quit.")
-    os.system(f"docker exec -it scioer_{courseName} bash")
+    os.system(f"docker exec -it scioer_{courseName} bash --login")
 
 
 def delete_container(container, **kwargs):
