@@ -1,1 +1,6 @@
-from .__version__ import __version__
+
+__version__ = "UNKOWN"
+try:
+  from .__version__ import __version__
+except:
+    pass
