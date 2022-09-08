@@ -163,11 +163,12 @@ def start_container(client: docker.client, course: dict, **kwargs):
     container = None
     try:
         container = client.containers.get(f'scioer_{course["name"]}')
-        _LOGGER.info(f'Container `scioer_{course["name"]}` already exists, starting...')
+        _LOGGER.info(f'Container for `scioer_{course["name"]}` already exists.')
 
         if container.status == "running":
-            _LOGGER.info("Container is already running")
+            _LOGGER.info("Container is already running, not restarting.")
         else:
+            _LOGGER.info("Restarting container")
             container.start()
             _LOGGER.info("Successfully started")
 
