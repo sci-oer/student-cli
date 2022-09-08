@@ -1,11 +1,8 @@
-from textwrap import indent
 import typer
 from collections.abc import Mapping
 
-import sys
-import yaml
+
 import click
-import platform
 import scioer.config.load as load
 import scioer.config.parse as parser
 import os
@@ -13,11 +10,10 @@ import re
 from typing import Optional
 from pathlib import Path
 import logging
-# from scioer.__version__ import __version__  # noqa: I900
 
 __version__ = "UNKOWN"
 try:
-  from scioer.__version__ import __version__
+    from scioer.__version__ import __version__
 except:
     pass
 
