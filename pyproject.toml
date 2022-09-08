@@ -22,7 +22,7 @@ keywords = [
     "Internal Tools"
 ]
 classifiers = [
-    "Development Status :: 1 - Planning",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Education",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3.10",
