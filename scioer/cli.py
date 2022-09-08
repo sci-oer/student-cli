@@ -49,14 +49,13 @@ def conf_callback(ctx: typer.Context, param: typer.CallbackParam, value: Path):
 
     if not value and not config:
         config = configFiles[0]
-        _LOGGER.debug(f"No config file found, using default: {config}")
+        _LOGGER.info(f"No config file found, using default: {config}")
     elif value and value != config:
         config = value
-        _LOGGER.debug(f"Config file does not exist yet, using anyway: {config}")
+        _LOGGER.info(f"Config file does not exist yet, using anyway: {config}")
 
-    _LOGGER.debug(f"Loading config file:: {value}")
     if config:
-        _LOGGER.debug(f"Loading from config file: {config}")
+        _LOGGER.info(f"Loading from config file: {config}")
 
         data = parser.load_config_file(config)
 
@@ -111,6 +110,8 @@ def load_course(config: Mapping, courseName: str, ask: bool = True):
 
     if course:
         course["name"] = courseName
+
+    _LOGGER.info("course content:", course)
     return course
 
 
@@ -150,12 +151,15 @@ def start(
         name = list(config.keys())[0]
 
     course = load_course(config, name)
-    _LOGGER.debug("course content:", course)
 
     if course.get("auto_pull", False) or pull:
         typer.secho(
-            f"Pulling the latest version of the {course['name']}...",
+            f"Pulling the latest version of the {course['name']}",
             fg=typer.colors.GREEN,
+        )
+        typer.secho(
+            f"This may take a while...",
+            fg=typer.colors.YELLOW,
         )
         docker.fetch_latest(client, course["image"])
 
@@ -180,9 +184,12 @@ def stop(
         name = list(config.keys())[0]
 
     course = load_course(config, name, ask=False)
-    typer.secho(f"{course}", fg=typer.colors.YELLOW)
 
     if course:
+        typer.secho(
+            f"Stopping course container, this make take a couple seconds...",
+            fg=typer.colors.RED,
+        )
         docker.stop_container(client, course["name"], keep)
     else:
         typer.secho(f'Course "{name}" is not running.', fg=typer.colors.YELLOW)
@@ -203,7 +210,6 @@ def shell(
         name = list(config.keys())[0]
 
     course = load_course(config, name, ask=False)
-    typer.secho(f"{course}", fg=typer.colors.YELLOW)
 
     if course:
         docker.attach(client, course["name"])
@@ -246,6 +252,7 @@ def status(
     client = docker.setup()
 
     config = ctx.default_map
+    _LOGGER.info(f"Config contents: {config}")
     names = list(config.keys())
 
     # containers = client.containers.list(all=True)
@@ -256,6 +263,7 @@ def status(
     for n in names:
         try:
             c = client.containers.get(f"scioer_{n}")
+            _LOGGER.debug(f"Container information for course {n}: {c.attrs}")
             filtered.append(c)
         except:
             notRunning.append(n)
@@ -360,10 +368,8 @@ def config(
         )
         raise typer.Exit(1)
 
-    print(f"config file: : {configFile}")
-
     config = ctx.default_map
-    print(f"config contents: : {config}")
+    _LOGGER.info(f"config contents: {config}")
 
     course_name = typer.prompt("What's the name of the course?")
     safe_course_name = "".join(
