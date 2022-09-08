@@ -1,5 +1,20 @@
 # Changelog
 
+## [v1.0.0](https://github.com/sci-oer/student-cli/releases/v1.0.0) (2022-09-08)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.6.2...v1.0.0)
+
+**Merged pull requests:**
+
+- chore: bump pypi classifier to stable [\#92](https://github.com/sci-oer/student-cli/pull/92) ([MarshallAsch](https://github.com/MarshallAsch))
+- fix: replace container.run\_exec with a docker exec system call [\#91](https://github.com/sci-oer/student-cli/pull/91) ([MarshallAsch](https://github.com/MarshallAsch))
+- chore: improve log message and general messages [\#90](https://github.com/sci-oer/student-cli/pull/90) ([MarshallAsch](https://github.com/MarshallAsch))
+- fix: handle name in use, image not found, and unkown docker api erros on start [\#89](https://github.com/sci-oer/student-cli/pull/89) ([MarshallAsch](https://github.com/MarshallAsch))
+- feat: add multiple log level options [\#88](https://github.com/sci-oer/student-cli/pull/88) ([MarshallAsch](https://github.com/MarshallAsch))
+- fix: load bash profile when starting shell in container [\#87](https://github.com/sci-oer/student-cli/pull/87) ([MarshallAsch](https://github.com/MarshallAsch))
+- chore: change build tooling to pyproject and switch versioning tool [\#86](https://github.com/sci-oer/student-cli/pull/86) ([MarshallAsch](https://github.com/MarshallAsch))
+- Update dependency pathspec to v0.10.1 [\#84](https://github.com/sci-oer/student-cli/pull/84) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v0.6.2](https://github.com/sci-oer/student-cli/releases/v0.6.2) (2022-09-05)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.6.1...v0.6.2)
