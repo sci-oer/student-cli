@@ -29,7 +29,7 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.7",
-    "License :: GNU Affero General Public License v3",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
     "Operating System :: OS Independent",
     "Topic :: Education",
     "Topic :: Education :: Computer Aided Instruction (CAI)",
