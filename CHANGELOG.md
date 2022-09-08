@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.0.1](https://github.com/sci-oer/student-cli/releases/v1.0.1) (2022-09-08)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v1.0.0...v1.0.1)
+
+**Merged pull requests:**
+
+- fix: update license string [\#93](https://github.com/sci-oer/student-cli/pull/93) ([MarshallAsch](https://github.com/MarshallAsch))
+
 ## [v1.0.0](https://github.com/sci-oer/student-cli/releases/v1.0.0) (2022-09-08)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v0.6.2...v1.0.0)
