@@ -6,6 +6,7 @@ import typer
 import subprocess
 import re
 from collections.abc import Mapping
+import sys
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -102,22 +103,57 @@ def fetch_latest(client: docker.client, repository, **kwargs):
 
 
 def create_container(client: docker.client, course: dict, **kwargs):
-
-    # uid = os.getuid()
-    # gid = os.getgid()
+    try:
+        _LOGGER.info(f"checking if image {course['image']} exists locally...")
+        i = client.images.get(course["image"])
+        _LOGGER.info("Image exists locally.")
+    except docker.errors.ImageNotFound as e:
+        _LOGGER.info("Image is not found, start will take a while to pull first.")
+        typer.secho(
+            f"Course image needs to be downloaded, this may take a while...",
+            fg=typer.colors.YELLOW,
+        )
 
     _LOGGER.info(f"starting `{course['image']}` container as `{course['name']}`...")
-    container = client.containers.run(
-        course["image"],
-        ports=port_map(course["ports"], course.get("public", False)),
-        environment=port_env_map(course["ports"]),
-        name=f'scioer_{course["name"]}',
-        hostname=course["name"],
-        tty=True,
-        detach=True,
-        # user=f"{uid}:{gid}",
-        volumes=[f"{course['volume']}:/course"],
-    )
+    try:
+        container = client.containers.run(
+            course["image"],
+            ports=port_map(course["ports"], course.get("public", False)),
+            environment=port_env_map(course["ports"]),
+            name=f'scioer_{course["name"]}',
+            hostname=course["name"],
+            tty=True,
+            detach=True,
+            volumes=[f"{course['volume']}:/course"],
+        )
+    except docker.errors.ImageNotFound as e:
+        _LOGGER.error("Image not found.", e)
+        typer.secho(
+            f"Course image not found, check the config file that the image name is correct.",
+            fg=typer.colors.RED,
+        )
+        sys.exit(1)
+    except docker.errors.APIError as e:
+        _LOGGER.debug(f"Failed to start the container: {e}")
+
+        if e.status_code == 409:
+            typer.secho(
+                f"Container name already in use. Please delete the container with the name `scioer_{course['name']}` before trying again.",
+                fg=typer.colors.RED,
+            )
+            sys.exit(2)
+        elif e.status_code == 404:
+            typer.secho(
+                f"Course image not found, check the config file that the image name is correct.",
+                fg=typer.colors.RED,
+            )
+            sys.exit(3)
+
+        typer.secho(
+            f"Unknown error, aborting...",
+            fg=typer.colors.RED,
+        )
+        sys.exit(4)
 
     return container
 
