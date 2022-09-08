@@ -72,11 +72,6 @@ def version_callback(value: bool):
         raise typer.Exit()
 
 
-def verbose_callback(verbose: bool):
-    if verbose:
-        logging.basicConfig(level=logging.DEBUG)
-
-
 configOption = typer.Option(
     None,
     "--config",
@@ -449,14 +444,19 @@ def config(
 
 @app.callback()
 def setup(
-    verbose: Optional[bool] = typer.Option(
-        False, "--verbose", "-v", callback=verbose_callback, is_eager=True
-    ),
+    verbose: Optional[bool] = typer.Option(False, "--verbose", "-v"),
+    debug: Optional[bool] = typer.Option(False, "--debug"),
     version: Optional[bool] = typer.Option(
         None, "--version", "-V", callback=version_callback, is_eager=True
     ),
 ):
-    pass
+    level = logging.WARNING
+    if debug:
+        level = logging.DEBUG
+    elif verbose:
+        level = logging.INFO
+
+    logging.basicConfig(level=level)
 
 
 if __name__ == "__main__":
