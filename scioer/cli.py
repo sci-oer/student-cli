@@ -1,11 +1,8 @@
-from textwrap import indent
 import typer
 from collections.abc import Mapping
 
-import sys
-import yaml
+
 import click
-import platform
 import scioer.config.load as load
 import scioer.config.parse as parser
 import os
@@ -13,11 +10,10 @@ import re
 from typing import Optional
 from pathlib import Path
 import logging
-# from scioer.__version__ import __version__  # noqa: I900
 
 __version__ = "UNKOWN"
 try:
-  from scioer.__version__ import __version__
+    from scioer.__version__ import __version__
 except:
     pass
 
@@ -74,11 +70,6 @@ def version_callback(value: bool):
     if value:
         typer.echo(f"scioer CLI Version: {__version__}")
         raise typer.Exit()
-
-
-def verbose_callback(verbose: bool):
-    if verbose:
-        logging.basicConfig(level=logging.DEBUG)
 
 
 configOption = typer.Option(
@@ -453,14 +444,19 @@ def config(
 
 @app.callback()
 def setup(
-    verbose: Optional[bool] = typer.Option(
-        False, "--verbose", "-v", callback=verbose_callback, is_eager=True
-    ),
+    verbose: Optional[bool] = typer.Option(False, "--verbose", "-v"),
+    debug: Optional[bool] = typer.Option(False, "--debug"),
     version: Optional[bool] = typer.Option(
         None, "--version", "-V", callback=version_callback, is_eager=True
     ),
 ):
-    pass
+    level = logging.WARNING
+    if debug:
+        level = logging.DEBUG
+    elif verbose:
+        level = logging.INFO
+
+    logging.basicConfig(level=level)
 
 
 if __name__ == "__main__":
