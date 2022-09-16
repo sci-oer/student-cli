@@ -1,5 +1,24 @@
 # Changelog
 
+## [v1.0.2](https://github.com/sci-oer/student-cli/releases/v1.0.2) (2022-09-16)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v1.0.1...v1.0.2)
+
+**Implemented enhancements:**
+
+- config file location in status output [\#98](https://github.com/sci-oer/student-cli/issues/98)
+
+**Fixed bugs:**
+
+- add more details to the unknown error message [\#97](https://github.com/sci-oer/student-cli/issues/97)
+- info log not printing contents of the config file [\#95](https://github.com/sci-oer/student-cli/issues/95)
+
+**Merged pull requests:**
+
+- fix: add the config file path to the status output [\#102](https://github.com/sci-oer/student-cli/pull/102) ([MarshallAsch](https://github.com/MarshallAsch))
+- fix: add the explination to the error message for the unknown docker errors [\#101](https://github.com/sci-oer/student-cli/pull/101) ([MarshallAsch](https://github.com/MarshallAsch))
+- fix: now log the content of the course config block to the info log [\#100](https://github.com/sci-oer/student-cli/pull/100) ([MarshallAsch](https://github.com/MarshallAsch))
+
 ## [v1.0.1](https://github.com/sci-oer/student-cli/releases/v1.0.1) (2022-09-08)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v1.0.0...v1.0.1)
