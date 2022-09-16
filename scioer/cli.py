@@ -111,7 +111,7 @@ def load_course(config: Mapping, courseName: str, ask: bool = True):
     if course:
         course["name"] = courseName
 
-    _LOGGER.info("course content:", course)
+    _LOGGER.info(f"course content: {course}")
     return course
 
 
