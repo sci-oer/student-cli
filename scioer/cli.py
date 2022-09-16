@@ -62,6 +62,11 @@ def conf_callback(ctx: typer.Context, param: typer.CallbackParam, value: Path):
         ctx.default_map = ctx.default_map or {}  # Initialize the default map
         ctx.default_map.update(data)  # Merge the config dict into default_map
 
+        ctx.obj = ctx.obj or {}  # Initialize the object
+        ctx.obj.update(
+            {"config_file": config, "config": data}
+        )  # Merge the config dict into object
+
     return config
 
 
@@ -252,8 +257,13 @@ def status(
     client = docker.setup()
 
     config = ctx.default_map
+    config_file = ctx.obj["config_file"]
     _LOGGER.info(f"Config contents: {config}")
     names = list(config.keys())
+
+    home = os.path.expanduser("~")
+    configPath = config_file.replace(home, "~")
+    print(f"Config file: {configPath}")
 
     # containers = client.containers.list(all=True)
     # containers = [c for c in containers if c.name.replace('scioer_', '') in names ]
