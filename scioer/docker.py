@@ -150,7 +150,7 @@ def create_container(client: docker.client, course: dict, **kwargs):
             sys.exit(3)
 
         typer.secho(
-            f"Unknown error, aborting...",
+            f"Unknown error: {e.explanation}, aborting...",
             fg=typer.colors.RED,
         )
         sys.exit(4)
