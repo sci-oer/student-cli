@@ -15,12 +15,6 @@ name = "sci-oer"
 description = "A cli application to help launch the sci-oer course container"
 readme = "README.md"
 requires-python = ">=3.7"
-keywords = [
-    "Monitoring",
-    "AWS",
-    "Plex",
-    "Internal Tools"
-]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Education",
@@ -40,7 +34,7 @@ dynamic = ["version", "dependencies"]
 
 [[project.authors]]
 name = "Marshall Asch"
-email = "marshall.asch@plexapp.com"
+email = "masch@uoguelph.ca"
 
 [project.urls]
 Documentation = "https://github.com/sci-oer/student-cli/blob/main/README.md"
