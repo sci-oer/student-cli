@@ -5,7 +5,6 @@ import typer
 
 
 def load_config_file(file):
-
     if not os.path.isfile(file):
         return {}
 

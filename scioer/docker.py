@@ -43,7 +43,6 @@ def port_mapping(mapping: str, public: bool) -> Mapping:
 
 
 def port_map(portList: list, public: bool) -> dict:
-
     portMapping = {}
     for p in portList:
         portMapping.update(port_mapping(p, public))
@@ -159,7 +158,6 @@ def create_container(client: docker.client, course: dict, **kwargs):
 
 
 def start_container(client: docker.client, course: dict, **kwargs):
-
     container = None
     try:
         container = client.containers.get(f'scioer_{course["name"]}')
