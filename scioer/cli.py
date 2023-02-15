@@ -40,7 +40,6 @@ app = typer.Typer(
 
 
 def conf_callback(ctx: typer.Context, param: typer.CallbackParam, value: Path):
-
     if value:
         value = os.path.realpath(os.path.expanduser(str(value)))
 
@@ -96,11 +95,9 @@ courseNameArgument = typer.Argument(
 
 
 def load_course(config: Mapping, courseName: str, ask: bool = True):
-
     course = config.get(courseName, {})
 
     while ask and not course:
-
         if courseName:
             typer.secho(
                 f'Course "{courseName} is not found. use `scioer config` if you want to create it.',
@@ -343,7 +340,6 @@ def prompt_custom_ports() -> Mapping:
     mappings = mapping
 
     while value != "":
-
         value = typer.prompt(
             "Custom ports to expose, in the form of 'container:host', or no input to skip ",
             default="",
