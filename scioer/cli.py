@@ -382,7 +382,7 @@ def config(
         x for x in course_name.replace(" ", "_") if x.isalnum() or x == "_"
     )
 
-    default_image = "marshallasch/oo-resource:latest"
+    default_image = "scioer/oo-java:W23"
     default_volume = os.path.join(os.path.expanduser("~/Desktop"), safe_course_name)
 
     course = config.get(safe_course_name, {})
