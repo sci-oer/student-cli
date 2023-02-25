@@ -1,5 +1,6 @@
 # Student CLI
 ![GitHub](https://img.shields.io/github/license/sci-oer/student-cli?style=plastic)
+![GitHub](https://img.shields.io/github/license/sci-oer/tudent-cli?style=plastic)
 
 
 Wrapper script to help start and stop the sci-oer docker container.
@@ -7,6 +8,9 @@ Wrapper script to help start and stop the sci-oer docker container.
 
 ## System Requirements
 [System Requirements]: #system-requirements
+
+- python 3.7 or later installed
+- Docker must be installed and running
 
 ## Installation
 
@@ -123,14 +127,21 @@ And if there is a problem, the `--debug` flag will make `sci-oer` output more in
 ## Related projects
 [Related projects]: #related-projects
 
-### [sci-oer/oo-resources](https://github.com/sci-oer/oo-resources)
+### [sci-oer/base-resource](https://github.com/sci-oer/base-resource)
 
 The base open educational resource Docker image.
+- [sci-oer/java-resource](https://github.com/sci-oer/java-resource)
+- [sci-oer/c-resource](https://github.com/sci-oer/c-resource)
+- [sci-oer/mariadb-resource](https://github.com/sci-oer/mariadb-resource)
 
 
 ### [sci-oer/automated-builder](https://github.com/sci-oer/automated-builder)
 
-The cli tool and Docker image to create customized versions of the base oo-resource image.
+The [cli tool] and [Docker image] to create customized versions of the base resource images.
+
+
+[cli tool]: https://pypi.org/project/scioer-builder/
+[Docker image]: https://hub.docker.com/r/scioer/automated-builder
 
 ## Contributing
 
@@ -152,8 +163,9 @@ If these topics are not able to help you resolve the issue feel free to open a [
 
 If Any files that you edited in the `/course` directory within the container will be saved to your computer in one of the following locations:
 
-1. `$XDG_DATA_HOME/scioer/<container name>`
-2. `$HOME/.local/share/scioer/<container name>`
+1. `~/Desktop/<container name>`
+2. `$XDG_DATA_HOME/scioer/<container name>`
+3. `$HOME/.local/share/scioer/<container name>`
 
 Or it will be saved to the location that was specified through the config file or the cli flags that were specified when the container was started.
 
