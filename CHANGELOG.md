@@ -1,5 +1,46 @@
 # Changelog
 
+## [v1.1.0](https://github.com/sci-oer/student-cli/releases/v1.1.0) (2023-02-25)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v1.0.2...v1.1.0)
+
+**Implemented enhancements:**
+
+- wiki and jupyter have a startup permissions issue [\#46](https://github.com/sci-oer/student-cli/issues/46)
+- short help should include the basic command options [\#35](https://github.com/sci-oer/student-cli/issues/35)
+- chore: cleanup documentation and default example resource image' [\#125](https://github.com/sci-oer/student-cli/pull/125) ([MarshallAsch](https://github.com/MarshallAsch))
+
+**Merged pull requests:**
+
+- chore\(deps\): update dependency setuptools to v67 [\#133](https://github.com/sci-oer/student-cli/pull/133) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency rich to v13 [\#132](https://github.com/sci-oer/student-cli/pull/132) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency pytype to v2023 [\#131](https://github.com/sci-oer/student-cli/pull/131) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency platformdirs to v3 [\#130](https://github.com/sci-oer/student-cli/pull/130) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency packaging to v23 [\#129](https://github.com/sci-oer/student-cli/pull/129) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency mypy-extensions to v1 [\#128](https://github.com/sci-oer/student-cli/pull/128) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency iniconfig to v2 [\#127](https://github.com/sci-oer/student-cli/pull/127) ([renovate[bot]](https://github.com/apps/renovate))
+- fix: remove deprecated set-output command in workflow [\#126](https://github.com/sci-oer/student-cli/pull/126) ([MarshallAsch](https://github.com/MarshallAsch))
+- chore\(deps\): update dependency black to v23 [\#124](https://github.com/sci-oer/student-cli/pull/124) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update pypa/gh-action-pypi-publish action to v1.6.4 [\#123](https://github.com/sci-oer/student-cli/pull/123) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency setuptools to v65.7.0 [\#122](https://github.com/sci-oer/student-cli/pull/122) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency pathspec to v0.11.0 [\#121](https://github.com/sci-oer/student-cli/pull/121) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency attrs to v22.2.0 [\#120](https://github.com/sci-oer/student-cli/pull/120) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency shellingham to v1.5.1 [\#119](https://github.com/sci-oer/student-cli/pull/119) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency mypy-extensions to v0.4.4 [\#118](https://github.com/sci-oer/student-cli/pull/118) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency wheel to v0.38.1 \[security\] [\#117](https://github.com/sci-oer/student-cli/pull/117) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency setuptools to v65.5.1 \[security\] [\#116](https://github.com/sci-oer/student-cli/pull/116) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency platformdirs to v2.6.2 [\#112](https://github.com/sci-oer/student-cli/pull/112) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency typer to v0.7.0 [\#111](https://github.com/sci-oer/student-cli/pull/111) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency wheel to v0.38.4 [\#110](https://github.com/sci-oer/student-cli/pull/110) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency docker to v6.0.1 [\#109](https://github.com/sci-oer/student-cli/pull/109) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency pytest to v7.2.1 [\#108](https://github.com/sci-oer/student-cli/pull/108) ([renovate[bot]](https://github.com/apps/renovate))
+- fix: cleanup copy paste errors from work author email and keywords [\#107](https://github.com/sci-oer/student-cli/pull/107) ([MarshallAsch](https://github.com/MarshallAsch))
+- chore\(deps\): update dependency typing\_extensions to v4.5.0 [\#106](https://github.com/sci-oer/student-cli/pull/106) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency black to v22.12.0 [\#105](https://github.com/sci-oer/student-cli/pull/105) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency rich to v12.6.0 [\#104](https://github.com/sci-oer/student-cli/pull/104) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency setuptools to v65.6.3 [\#103](https://github.com/sci-oer/student-cli/pull/103) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency pytype to v2022.12.15 [\#94](https://github.com/sci-oer/student-cli/pull/94) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v1.0.2](https://github.com/sci-oer/student-cli/releases/v1.0.2) (2022-09-16)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v1.0.1...v1.0.2)
