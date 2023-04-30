@@ -11,7 +11,18 @@ from typing import Optional
 from pathlib import Path
 import logging
 
-__version__ = "UNKOWN"
+try:
+    import readline
+except:
+    import sys
+
+    if sys.platform == "win32" or sys.platform == "cygwin":
+        try:
+            from pyreadline3 import Readline
+        except:
+            pass
+
+__version__ = "UNKNOWN"
 try:
     from scioer.__version__ import __version__
 except:
