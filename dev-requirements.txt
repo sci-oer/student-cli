@@ -1,6 +1,6 @@
 black==23.3.0
 packaging==23.1
 pytest==7.3.0
-wheel==0.38.4
+wheel==0.40.0
 setuptools==67.4.0
 pytype==2023.2.17
