@@ -1,5 +1,30 @@
 # Changelog
 
+## [v1.2.0](https://github.com/sci-oer/student-cli/releases/v1.2.0) (2023-04-30)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v1.1.0...v1.2.0)
+
+**Implemented enhancements:**
+
+- feat: add readline so prompts can be edited [\#148](https://github.com/sci-oer/student-cli/pull/148) ([MarshallAsch](https://github.com/MarshallAsch))
+
+**Merged pull requests:**
+
+- chore!: turn off windows ci piplines that keep failing [\#147](https://github.com/sci-oer/student-cli/pull/147) ([MarshallAsch](https://github.com/MarshallAsch))
+- chore: update release notes template [\#146](https://github.com/sci-oer/student-cli/pull/146) ([MarshallAsch](https://github.com/MarshallAsch))
+- chore: auto tag renovate prs as dependancy updates [\#145](https://github.com/sci-oer/student-cli/pull/145) ([MarshallAsch](https://github.com/MarshallAsch))
+- chore\(deps\): update dependency attrs to v23 [\#144](https://github.com/sci-oer/student-cli/pull/144) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency packaging to v23.1 [\#143](https://github.com/sci-oer/student-cli/pull/143) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency black to v23.3.0 [\#142](https://github.com/sci-oer/student-cli/pull/142) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency pathspec to v0.11.1 [\#141](https://github.com/sci-oer/student-cli/pull/141) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency wheel to v0.40.0 [\#140](https://github.com/sci-oer/student-cli/pull/140) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update pypa/gh-action-pypi-publish action to v1.8.5 [\#139](https://github.com/sci-oer/student-cli/pull/139) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency setuptools to v67.7.2 [\#138](https://github.com/sci-oer/student-cli/pull/138) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency rich to v13.3.5 [\#137](https://github.com/sci-oer/student-cli/pull/137) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency platformdirs to v3.5.0 [\#136](https://github.com/sci-oer/student-cli/pull/136) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency pytest to v7.3.1 [\#135](https://github.com/sci-oer/student-cli/pull/135) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency pytype to v2023.4.27 [\#134](https://github.com/sci-oer/student-cli/pull/134) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v1.1.0](https://github.com/sci-oer/student-cli/releases/v1.1.0) (2023-02-25)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v1.0.2...v1.1.0)
