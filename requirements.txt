@@ -14,6 +14,6 @@ pyparsing==3.0.9
 rich==13.3.5
 shellingham==1.5.1
 tomli==2.0.1
-typer==0.7.0
+typer==0.9.0
 typing_extensions==4.5.0
 pyreadline3==3.4.1; platform_system == 'Windows'
