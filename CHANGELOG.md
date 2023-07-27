@@ -1,5 +1,22 @@
 # Changelog
 
+## [v1.3.0](https://github.com/sci-oer/student-cli/releases/v1.3.0) (2023-07-27)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v1.2.0...v1.3.0)
+
+**Merged pull requests:**
+
+- chore\(deps\): update dependency pyyaml to v6.0.1 [\#160](https://github.com/sci-oer/student-cli/pull/160) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency click to v8.1.6 [\#159](https://github.com/sci-oer/student-cli/pull/159) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency pyparsing to v3.1.0 [\#158](https://github.com/sci-oer/student-cli/pull/158) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency pytest to v7.4.0 [\#157](https://github.com/sci-oer/student-cli/pull/157) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency rich to v13.4.2 [\#156](https://github.com/sci-oer/student-cli/pull/156) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency typing\_extensions to v4.7.1 [\#155](https://github.com/sci-oer/student-cli/pull/155) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency setuptools to v67.8.0 [\#154](https://github.com/sci-oer/student-cli/pull/154) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency docker to v6.1.3 [\#151](https://github.com/sci-oer/student-cli/pull/151) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update pypa/gh-action-pypi-publish action to v1.8.8 [\#150](https://github.com/sci-oer/student-cli/pull/150) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency typer to v0.9.0 [\#149](https://github.com/sci-oer/student-cli/pull/149) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v1.2.0](https://github.com/sci-oer/student-cli/releases/v1.2.0) (2023-04-30)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v1.1.0...v1.2.0)
