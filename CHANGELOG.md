@@ -1,5 +1,22 @@
 # Changelog
 
+## [v1.3.1](https://github.com/sci-oer/student-cli/releases/v1.3.1) (2023-09-05)
+
+[Full Changelog](https://github.com/sci-oer/student-cli/compare/v1.3.0...v1.3.1)
+
+**Merged pull requests:**
+
+- chore\(deps\): update actions/checkout action to v4 [\#172](https://github.com/sci-oer/student-cli/pull/172) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency shellingham to v1.5.3 [\#171](https://github.com/sci-oer/student-cli/pull/171) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency pytest to v7.4.1 [\#170](https://github.com/sci-oer/student-cli/pull/170) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency click to v8.1.7 [\#169](https://github.com/sci-oer/student-cli/pull/169) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update pypa/gh-action-pypi-publish action to v1.8.10 [\#168](https://github.com/sci-oer/student-cli/pull/168) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency pyparsing to v3.1.1 [\#167](https://github.com/sci-oer/student-cli/pull/167) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency rich to v13.5.2 [\#166](https://github.com/sci-oer/student-cli/pull/166) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency pathspec to v0.11.2 [\#165](https://github.com/sci-oer/student-cli/pull/165) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency wheel to v0.41.2 [\#163](https://github.com/sci-oer/student-cli/pull/163) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update dependency platformdirs to v3.10.0 [\#153](https://github.com/sci-oer/student-cli/pull/153) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v1.3.0](https://github.com/sci-oer/student-cli/releases/v1.3.0) (2023-07-27)
 
 [Full Changelog](https://github.com/sci-oer/student-cli/compare/v1.2.0...v1.3.0)
