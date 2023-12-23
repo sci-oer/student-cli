@@ -1,4 +1,4 @@
-black==23.3.0
+black==23.12.1
 packaging==23.1
 pytest==7.4.1
 wheel==0.41.2
